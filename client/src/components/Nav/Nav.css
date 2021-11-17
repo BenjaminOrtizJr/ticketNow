@@ -1,0 +1,284 @@
+/* Top Navigation */
+
+.nav__top {
+  background-color: rgb(32, 32, 32);
+  width: 100%;
+  height: 50px;
+  display: flex;
+}
+
+.user__section {
+    display: flex;
+    justify-content: flex-end;
+    width: 106rem;
+    margin-top: 11px;
+}
+
+.user__profile-image {
+    border-radius: 50%;
+    margin-bottom: 7px;
+}
+
+.user__online-circle {
+    color: rgb(39, 243, 39);
+    transform: scale(0.4);
+    margin-top: 15px;
+    margin-left: -16px;
+}
+
+.user__name {
+    color: white;
+    font-size: 14px;
+    margin-top: 7px;
+}
+
+.nav__top-icons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 15px;
+    margin-left: 3.5em;
+    color: whitesmoke;
+    cursor: pointer; 
+    width: 130px;  
+}
+
+.logout__button {
+    background-color: rgb(32, 32, 32);
+    outline: none;
+    border: none;
+    color: whitesmoke;
+    font-size: 12px;
+    cursor: pointer;
+    height: 30px;
+    margin-top: 12px;
+}
+
+/* Icon Hovers */
+
+.search-icon:hover {
+    color: lime;
+}
+
+.chat-icon:hover {
+    color: lime;
+}
+
+.help-icon:hover {
+    color: lime;
+}
+
+.settings-icon:hover {
+    color: lime;
+}
+
+.logout__button:hover {
+    background-color: rgb(233, 77, 77);
+    border-radius: 5px;
+}
+
+/* Side Navigaton */
+
+.nav__side {
+    background-color: rgb(32, 32, 32);
+    width: 50px;
+    height: 100%;
+    overflow: auto;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h3 {
+    color: white;
+    padding: 1.5em 15px;
+    margin-left: 5em;
+    font-size: 12px;
+}
+
+.filter__icon-container {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    width: 100%;
+    text-align: center;
+}
+
+.filter-icon {
+    color: white;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.home__icon-container {
+    border-bottom: 1px solid black;
+    width: 100%;
+    text-align: center;
+}
+
+.home-icon {
+    color: rgb(121, 214, 78);
+    margin: 5px;
+    cursor: pointer;
+}
+
+.add__icon-container {
+    border-bottom: 1px solid black;
+    width: 100%;
+    text-align: center;
+}
+
+.add-icon {
+    color: rgb(180, 66, 161);
+    transform: scale(1.3);
+    margin: 5px;
+    cursor: pointer;
+}
+
+.add__icon-container {
+    border-bottom: 1px solid black;
+    width: 100%;
+    text-align: center;
+}
+
+.info__icon-container {
+    border-bottom: 1px solid black;
+    width: 100%;
+    text-align: center;
+}
+
+.info-icon {
+    color: orangered;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.storage__icon-container {
+    border-bottom: 1px solid black;
+    width: 100%;
+    text-align: center;
+}
+
+.storage-icon {
+    color: yellow;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.ticket__icon-container {
+    border-bottom: 1px solid black;
+    width: 100%;
+    text-align: center;
+}
+
+.ticket-icon {
+    color: rgb(0, 255, 242);
+    margin: 5px;
+    cursor: pointer;
+}
+
+.dashboard__icon-container {
+    border-bottom: 1px solid black;
+    width: 100%;
+    text-align: center;
+}
+
+.dashboard-icon {
+    color: rgb(0, 68, 255);
+    margin: 5px;
+    cursor: pointer;
+}
+
+.play__icon-container {
+    position: absolute;
+    top: 860px;
+    cursor: pointer;
+    border-top: 1px solid black;
+    width: 100%;
+    text-align: center;
+    /* z-index: 2; */
+}
+
+.play-icon {
+    color: white;
+    margin: 5px;
+}
+
+/* Top Inner Navigation */
+
+.top-inner-nav {
+    border: 1px solid rgb(95, 94, 94);
+    height: 40px;
+    background-color: lightgray;
+    display: flex;
+    justify-content: space-between;
+}
+
+.back-icon {
+    font-size: 55px;
+    border: 1px solid black;
+    border-radius: 3px;
+    margin-left: 55px;
+    margin-top: 8px;
+    padding: 5px;
+}
+
+.back-icon:hover {
+    background-color: rgb(204, 202, 202);
+}
+
+.burger-icon {
+    margin-left: 5px;
+}
+
+.burger-icon:hover {
+    background-color: rgb(204, 202, 202);
+    border: 1px solid black;
+    border-radius: 3px;
+}
+
+.ticket-number-container {
+    position: absolute; 
+    margin-top: 8px;
+    margin-left: 10px;
+}
+
+.inner-nav-box2 {
+    display: flex;
+    justify-content: space-between;
+    width: 180px;
+    margin-right: 5px;
+}
+
+.paperclip-icon {
+    position: relative;
+    top: 8px;
+}
+
+.more-icon {
+    position: relative;
+    top: 8px;
+}
+
+.submit-button1 {
+    position: relative;
+    top: 8px;
+    height: 25px;
+}
+
+.save-button1 {
+    position: relative;
+    top: 8px;
+    height: 25px;
+}
+
+/* Icon Hovers */
+
+.paperclip-icon:hover {
+    background-color: rgb(204, 202, 202);
+    border-radius: 3px;
+}
+
+.more-icon:hover {
+    background-color: rgb(204, 202, 202);
+    border-radius: 3px;
+}
