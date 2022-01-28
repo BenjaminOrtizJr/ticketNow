@@ -1,25 +1,34 @@
-import FilterListIcon from "@material-ui/icons/FilterList";
-import HomeOutlinedIcon from "@material-ui/icons/HomeOutlined";
-import AddIcon from "@material-ui/icons/Add";
-import InfoOutlinedIcon from "@material-ui/icons/InfoOutlined";
-import StorageRoundedIcon from "@material-ui/icons/StorageRounded";
-import ConfirmationNumberOutlinedIcon from "@material-ui/icons/ConfirmationNumberOutlined";
-import DashboardOutlinedIcon from "@material-ui/icons/DashboardOutlined";
-import FiberManualRecordIcon from "@material-ui/icons/FiberManualRecord";
-import SearchOutlinedIcon from "@material-ui/icons/SearchOutlined";
-import ForumOutlinedIcon from "@material-ui/icons/ForumOutlined";
-import HelpOutlineOutlinedIcon from "@material-ui/icons/HelpOutlineOutlined";
-import SettingsOutlinedIcon from '@material-ui/icons/SettingsOutlined';
-import ArrowBackIosOutlinedIcon from '@material-ui/icons/ArrowBackIosOutlined';
-import MenuOutlinedIcon from '@material-ui/icons/MenuOutlined';
-import AttachFileOutlinedIcon from '@material-ui/icons/AttachFileOutlined';
-import MoreHorizOutlinedIcon from '@material-ui/icons/MoreHorizOutlined';
-// import PlayCircleOutlineRoundedIcon from '@material-ui/icons/PlayCircleOutlineRounded';
-import Profile from '../Nav/images/profile_pic.jpg';
-import "../Nav/Nav.css";
+import React, { useContext } from 'react'
+// import { Link } from 'react-router-dom'
+import FilterListIcon from "@material-ui/icons/FilterList"
+import HomeOutlinedIcon from "@material-ui/icons/HomeOutlined"
+import AddIcon from "@material-ui/icons/Add"
+import InfoOutlinedIcon from "@material-ui/icons/InfoOutlined"
+import StorageRoundedIcon from "@material-ui/icons/StorageRounded"
+import ConfirmationNumberOutlinedIcon from "@material-ui/icons/ConfirmationNumberOutlined"
+import DashboardOutlinedIcon from "@material-ui/icons/DashboardOutlined"
+import FiberManualRecordIcon from "@material-ui/icons/FiberManualRecord"
+import SearchOutlinedIcon from "@material-ui/icons/SearchOutlined"
+import ForumOutlinedIcon from "@material-ui/icons/ForumOutlined"
+import HelpOutlineOutlinedIcon from "@material-ui/icons/HelpOutlineOutlined"
+import SettingsOutlinedIcon from '@material-ui/icons/SettingsOutlined'
+// import ArrowBackIosOutlinedIcon from '@material-ui/icons/ArrowBackIosOutlined'
+// import MenuOutlinedIcon from '@material-ui/icons/MenuOutlined'
+// import AttachFileOutlinedIcon from '@material-ui/icons/AttachFileOutlined'
+// import MoreHorizOutlinedIcon from '@material-ui/icons/MoreHorizOutlined'
+// import PlayCircleOutlineRoundedIcon from '@material-ui/icons/PlayCircleOutlineRounded'
+import Profile from '../Nav/images/profile_pic.jpg'
+// import "../Nav/Nav.css"
+import { UserContext } from '../../context/UserProvider'
 
+export default function Nav(props) {
+  const { logout } = props
+  const {
+    user: {
+      username
+    }
+  } = useContext(UserContext)
 
-export default function Nav() {
   return (
     <nav className="nav">
       <div className="nav__top">
@@ -30,7 +39,7 @@ export default function Nav() {
           {/* <FiberManualRecordIcon className="user__profile-circle" aria-label="profile-image" /> */}
           <img src={Profile} className="user__profile-image" alt="user_profile" />
           <FiberManualRecordIcon className="user__online-circle" aria-label="status-indicator"/>
-          <p className="user__name">Benjamin Ortiz Jr </p>
+          <p className="user__name">{username}</p>
           {/* <Select labelId="label" id="select">
           <MenuItem value="Profile">Profile</MenuItem>
           <MenuItem value="Logout">Logout</MenuItem>
@@ -42,7 +51,7 @@ export default function Nav() {
           <HelpOutlineOutlinedIcon className="help-icon" aria-label="help" />
           <SettingsOutlinedIcon className="settings-icon" aria-label="settings" />        
         </div>
-        {/* <button className="logout__button">LOGOUT</button> */}
+        <button className="logout__button" onClick={logout}>LOGOUT</button>
       </div>
 
      <div className="nav__side">
@@ -71,7 +80,7 @@ export default function Nav() {
             <PlayCircleOutlineRoundedIcon className="play-icon" aria-label="play" />      
         </div> */}
     </div>
-    <div className="top-inner-nav">
+    {/* <div className="top-inner-nav">
         <div className="inner-nav-box1">
             <ArrowBackIosOutlinedIcon  className="back-icon" aria-label="back-arrow" />
             <MenuOutlinedIcon className="burger-icon" aria-label="menu" />
@@ -86,7 +95,7 @@ export default function Nav() {
             <button className="submit-button1">Submit</button>
             <button className="save-button1">Save</button>        
         </div>
-    </div>
+    </div> */}
     </nav>  
   )
 };

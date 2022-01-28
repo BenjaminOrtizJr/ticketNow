@@ -1,9 +1,29 @@
 import React from 'react';
-import './Form.css';
 import InfoOutlinedIcon from '@material-ui/icons/InfoOutlined';
+import ArrowBackIosOutlinedIcon from '@material-ui/icons/ArrowBackIosOutlined'
+import MenuOutlinedIcon from '@material-ui/icons/MenuOutlined'
+import AttachFileOutlinedIcon from '@material-ui/icons/AttachFileOutlined'
+import MoreHorizOutlinedIcon from '@material-ui/icons/MoreHorizOutlined'
 
 const Form = () => {
     return (
+        <>
+        <div className="top-inner-nav">
+            <div className="inner-nav-box1">
+                <ArrowBackIosOutlinedIcon  className="back-icon" aria-label="back-arrow" />
+                <MenuOutlinedIcon className="burger-icon" aria-label="menu" />
+                <span className="ticket-number-container">
+                    <h6 className="ticket-number">Call-CALL0000001</h6>
+                    <h6 className="new-record">New record</h6>     
+                </span> 
+            </div>
+            <div className="inner-nav-box2">
+                <AttachFileOutlinedIcon className="paperclip-icon" aria-label="attachment" />
+                <MoreHorizOutlinedIcon className="more-icon" aria-label="more-options" />
+                <button className="submit-button1">Submit</button>
+                <button className="save-button1">Save</button>        
+            </div>
+        </div>
         <div className="form-container">
             <div className="form-wrapper">
                 <form className="section-one"> 
@@ -57,7 +77,8 @@ const Form = () => {
                         
                     </form>*/}
             </div>
-        </div>
+            </div>
+            </>
     )
 }
 export default Form
