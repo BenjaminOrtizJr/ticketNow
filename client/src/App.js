@@ -9,7 +9,8 @@ import Form from './components/Form';
 
 
 function App() {
-  const {token, logout} = useContext(UserContext)
+  const { token, logout } = useContext(UserContext)
+  
   return (
     <div className="App">
       {token && <Nav logout={logout} />}

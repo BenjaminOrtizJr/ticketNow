@@ -334,6 +334,7 @@ h3 {
   border-radius: 4px;
   border: none;
   background-color: silver;
+  outline: none;
 }
 
 .auth-container > form > button {

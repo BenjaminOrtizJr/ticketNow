@@ -14,7 +14,8 @@ userAxios.interceptors.request.use(config => {
 const UserProvider = (props) => {
     const initialState = { 
         user: JSON.parse(localStorage.getItem("user")) || {}, 
-        token: localStorage.getItem("token") || "", 
+        token: localStorage.getItem("token") || "",
+        tickets: [],
         errMsg: ""
     }
 
@@ -42,18 +43,11 @@ const UserProvider = (props) => {
                 const { user, token } = res.data
                 localStorage.setItem("token", token)
                 localStorage.setItem("user", JSON.stringify(user))
-                // getUserIssues()
-                // getAllIssues()
                 setUserState(prevUserState => ({
                     ...prevUserState,
                     user,
                     token
                 }))
-                // setIssueState(prevIssueState => ({
-                //     ...prevIssueState,
-                //     user,
-                //     token
-                // }))
             })
             .catch(err => handleAuthErr(err.response.data.errMsg))
     }
@@ -64,7 +58,7 @@ const UserProvider = (props) => {
         setUserState({
             user: {},
             token: "",
-            // issues: [],
+            tickets: []
             // comments: []
         })
     }
