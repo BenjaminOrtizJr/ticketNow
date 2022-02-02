@@ -8,6 +8,7 @@ import MoreHorizOutlinedIcon from '@material-ui/icons/MoreHorizOutlined'
 const Form = () => {
     return (
         <>
+            {/* Top Inner Navigation */}
         <div className="top-inner-nav">
             <div className="inner-nav-box1">
                 <ArrowBackIosOutlinedIcon  className="back-icon" aria-label="back-arrow" />
@@ -24,6 +25,7 @@ const Form = () => {
                 <button className="save-button1">Save</button>        
             </div>
         </div>
+            
         <div className="form-container">
             <div className="form-wrapper">
                 <form className="section-one"> 
@@ -78,7 +80,7 @@ const Form = () => {
                     </form>*/}
             </div>
             </div>
-            </>
+        </>
     )
 }
 export default Form

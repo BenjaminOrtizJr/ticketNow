@@ -14,7 +14,6 @@ function App() {
   return (
     <div className="App">
       {token && <Nav logout={logout} />}
-      <h1>🎫TicketNow</h1>
         <Switch>
           <Route exact path="/"
             render={() => token ? <Redirect to="/form"/> : <Auth />}

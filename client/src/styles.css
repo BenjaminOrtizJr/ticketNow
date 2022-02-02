@@ -4,12 +4,6 @@
   font-family: 'Source Sans Pro', sans-serif;
 }
 
-.App > h1 {
-  background-color: rgb(32, 32, 32);
-  color: whitesmoke;
-  border-bottom: 1px solid#055481;
-}
-
 /* Top Navigation */
 
 .nav__top {
@@ -301,7 +295,7 @@ h3 {
   display: flex;
   align-items: center;
   flex-direction: column;
-  height: 95vh;
+  height: 100vh;
   align-items: center;
   background-color: rgb(32, 32, 32);
   border-bottom: 1px solid #055481;
@@ -329,7 +323,7 @@ h3 {
 }
 
 .auth-container > form > input {
-  margin: 16px 8px;
+  margin: 10px 4px;
   padding: 8px;
   border-radius: 4px;
   border: none;
@@ -338,7 +332,7 @@ h3 {
 }
 
 .auth-container > form > button {
-  margin: 16px 8px;
+  margin: 10px 4px;
   padding: 5px;
   border-radius: 4px;
   border: none;
@@ -350,4 +344,10 @@ h3 {
   background-color: #2d698b;
   border: none;
   color: black;
+}
+.login-title {
+    margin-top: 10px;
+    background-color: rgb(32, 32, 32);
+    color: whitesmoke;
+    border-bottom: 1px solid#055481;
 }

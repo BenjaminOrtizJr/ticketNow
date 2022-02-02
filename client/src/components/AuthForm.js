@@ -13,7 +13,10 @@ const AuthForm = (props) => {
   } = props
   
   return (
+    <>
+    <h1 className="login-title">🎫TicketNow</h1>
     <form onSubmit={handleSubmit}>
+      
       <input 
         type="text" 
         value={username} 
@@ -30,7 +33,8 @@ const AuthForm = (props) => {
       <div className="err-box">
       <p style={{color: "red"}}>{errMsg}</p>
       </div>
-    </form>
+      </form>
+    </>
   )
 }
 

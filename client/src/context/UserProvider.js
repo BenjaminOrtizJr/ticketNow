@@ -59,7 +59,6 @@ const UserProvider = (props) => {
             user: {},
             token: "",
             tickets: []
-            // comments: []
         })
     }
 

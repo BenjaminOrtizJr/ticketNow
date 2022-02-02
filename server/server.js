@@ -12,14 +12,13 @@ app.use(express.json())
 app.use(morgan('dev'))
 
 // DB Connection
-mongoose.connect('mongodb+srv://bortizjr84:silent84@cluster0.x4jmz.mongodb.net/myFirstDatabase?retryWrites=true&w=majority',
+mongoose.connect("mongodb+srv://bortizjr84:silent84@ticketnow.x4jmz.mongodb.net/ticketNow?retryWrites=true&w=majority",
 {
     useNewUrlParser: true,
-    useUnifiedTopology: true,
-    useCreateIndex: true,
-    useFindAndModify: false
-},
-() => console.log('connected to the db-ticket-now'))
+    useUnifiedTopology: true
+})
+.then(() => console.log("Database connected!"))
+.catch(err => console.log(err.message))
 
 // Routes
 app.use('/auth', require('./routes/authRouter'))

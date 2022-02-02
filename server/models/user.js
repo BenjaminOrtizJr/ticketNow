@@ -12,7 +12,7 @@ const userSchema = new Schema({
     password: {
         type: String,
         required: true
-    }
+    }, 
     // memberSince: {
     //     type: Date,
     //     default: Date.now
@@ -24,7 +24,7 @@ const userSchema = new Schema({
     // comment: {
     //     type: Schema.Types.ObjectId,
     //     ref: "Comment"
-    // }
+    // },
 })
 
 // pre-save hook to encrypt user passwords on signup
