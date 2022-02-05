@@ -17,7 +17,7 @@ mongoose.connect("mongodb+srv://bortizjr84:silent84@ticketnow.x4jmz.mongodb.net/
     useNewUrlParser: true,
     useUnifiedTopology: true
 })
-.then(() => console.log("Database connected!"))
+.then(() => console.log("TicketNow DB connected!"))
 .catch(err => console.log(err.message))
 
 // Routes

@@ -1,7 +1,72 @@
+/* Global */
+
 * {
   margin: 0;
   box-sizing: border-box;
   font-family: 'Source Sans Pro', sans-serif;
+}
+
+/* Login/Signup Styles */
+
+.auth-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  align-items: center;
+  background-color: rgb(32, 32, 32);
+  border-bottom: 1px solid #055481;
+}
+
+.auth-container > button {
+  padding: 5px;
+  border-radius: 4px;
+  border: none;
+  background-color: #055481;
+  color: silver;
+}
+
+.auth-container > button:hover {
+  background-color: #2d698b;
+  border: none;
+  color: black;
+}
+
+.auth-container > form {
+  padding: 20px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+.auth-container > form > input {
+  margin: 10px 4px;
+  padding: 8px;
+  border-radius: 4px;
+  border: none;
+  background-color: silver;
+  outline: none;
+}
+
+.auth-container > form > button {
+  margin: 10px 4px;
+  padding: 5px;
+  border-radius: 4px;
+  border: none;
+  background:#055481;
+  color: silver;
+}
+
+.auth-container > form > button:hover {
+  background-color: #2d698b;
+  border: none;
+  color: black;
+}
+.login-title {
+    margin-top: 10px;
+    background-color: rgb(32, 32, 32);
+    color: whitesmoke;
+    border-bottom: 1px solid#055481;
 }
 
 /* Top Navigation */
@@ -289,65 +354,36 @@ h3 {
     border-radius: 3px;
 }
 
-/* AuthForm Styles */
+/* Ticket Form Styles */
 
-.auth-container {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  height: 100vh;
-  align-items: center;
-  background-color: rgb(32, 32, 32);
-  border-bottom: 1px solid #055481;
-}
-
-.auth-container > button {
-  padding: 5px;
-  border-radius: 4px;
-  border: none;
-  background-color: #055481;
-  color: silver;
-}
-
-.auth-container > button:hover {
-  background-color: #2d698b;
-  border: none;
-  color: black;
-}
-
-.auth-container > form {
-  padding: 20px;
-  border-radius: 5px;
-  display: flex;
-  flex-direction: column;
-}
-
-.auth-container > form > input {
-  margin: 10px 4px;
-  padding: 8px;
-  border-radius: 4px;
-  border: none;
-  background-color: silver;
-  outline: none;
-}
-
-.auth-container > form > button {
-  margin: 10px 4px;
-  padding: 5px;
-  border-radius: 4px;
-  border: none;
-  background:#055481;
-  color: silver;
-}
-
-.auth-container > form > button:hover {
-  background-color: #2d698b;
-  border: none;
-  color: black;
-}
-.login-title {
+.form-container {
+    border: 1px solid black;
+    margin-left: 60px;
+    margin-right: auto;
     margin-top: 10px;
-    background-color: rgb(32, 32, 32);
-    color: whitesmoke;
-    border-bottom: 1px solid#055481;
+}
+
+.section-one {
+    border: 1px solid red;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.section-one-a {
+    border: 1px solid blue;
+}
+
+.section-one-b {
+    border: 1px solid purple;
+}
+
+.section-two {
+    border: 1px solid black;
+    
+}
+
+.form-buttons {
+    border: 1px solid black;
+
 }
