@@ -80,22 +80,6 @@ export default function Nav(props) {
             <PlayCircleOutlineRoundedIcon className="play-icon" aria-label="play" />      
         </div> */}
     </div>
-    {/* <div className="top-inner-nav">
-        <div className="inner-nav-box1">
-            <ArrowBackIosOutlinedIcon  className="back-icon" aria-label="back-arrow" />
-            <MenuOutlinedIcon className="burger-icon" aria-label="menu" />
-            <span className="ticket-number-container">
-                <h6 className="ticket-number">Call-CALL0000001</h6>
-                <h6 className="new-record">New record</h6>     
-            </span> 
-        </div>
-        <div className="inner-nav-box2">
-            <AttachFileOutlinedIcon className="paperclip-icon" aria-label="attachment" />
-            <MoreHorizOutlinedIcon className="more-icon" aria-label="more-options" />
-            <button className="submit-button1">Submit</button>
-            <button className="save-button1">Save</button>        
-        </div>
-    </div> */}
     </nav>  
   )
 };

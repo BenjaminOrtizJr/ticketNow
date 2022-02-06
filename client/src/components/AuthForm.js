@@ -14,7 +14,7 @@ const AuthForm = (props) => {
   
   return (
     <>
-    <h1 className="login-title">🎫TicketNow</h1>
+    <h1 className="login-title">🎫 TicketNow</h1>
     <form onSubmit={handleSubmit}>
       
       <input 

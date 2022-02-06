@@ -364,26 +364,16 @@ h3 {
 }
 
 .section-one {
-    border: 1px solid red;
-    width: 100%;
-    display: flex;
-    justify-content: space-evenly;
-}
-
-.section-one-a {
-    border: 1px solid blue;
-}
-
-.section-one-b {
-    border: 1px solid purple;
-}
-
-.section-two {
-    border: 1px solid black;
+    
     
 }
 
-.form-buttons {
-    border: 1px solid black;
-
+.section-one-a {
+    
 }
+
+.section-one-b {
+    
+}
+
+
