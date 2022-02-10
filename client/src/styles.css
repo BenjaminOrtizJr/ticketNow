@@ -358,22 +358,55 @@ h3 {
 
 .form-container {
     border: 1px solid black;
-    margin-left: 60px;
+    margin-left: auto;
     margin-right: auto;
-    margin-top: 10px;
+    margin-top: 30px;
+    max-width: 1050px;
 }
 
 .section-one {
-    
-    
+    display: flex;
+    justify-content: space-between;
 }
 
 .section-one-a {
-    
+    display: flex;
+}
+
+.label-container1 {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-container1 {
+    display: flex;
+    flex-direction: column;
 }
 
 .section-one-b {
-    
+    display: flex; 
 }
 
+.label-container2 {
+    display: flex;
+    flex-direction: column;
+}
 
+.input-container2 {
+    display: flex;
+    flex-direction: column;
+}
+
+.section-two {
+    display: flex;
+}
+
+.label-container3 {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-container3 {
+    display: flex;
+    flex-direction: column;
+}

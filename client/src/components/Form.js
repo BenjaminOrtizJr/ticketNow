@@ -52,7 +52,6 @@ const Form = () => {
                         <input id="call-type" className="input-top-left" type="text" placeholder="" /> 
                     </div>
                 </div>
-             
                 <div className="section-one-b">
                     <div className="label-container2">
                         <label for="timestamp">Opened</label>
@@ -68,20 +67,21 @@ const Form = () => {
                     </div>        
                 </div>
             </div>
+                
             <div className="section-two">
-                
-                <label for="short-description">Short description</label>
-                <label for="description">Description</label>
-
-                <input type="text" className="input-bottom" placeholder="" />
-                <textarea type="text" className="text-box" />
-            </div>
-                
+                <div className="label-container3">
+                    <label for="short-description">Short description</label>
+                    <label for="description">Description</label>
+                </div>
+                <div className="input-container3"> 
+                    <input type="text" className="input-bottom" placeholder="" />
+                    <textarea type="text" className="text-box" />
+                </div>
+            </div>    
             <div className="form-buttons">
                 <button className="submit-button2">Submit</button>
                 <button className="save-button2">Save</button>
-            </div>
-                
+            </div>          
         </form>  
         </>
     )
