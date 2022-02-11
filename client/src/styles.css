@@ -360,7 +360,6 @@ h3 {
     border: 1px solid black;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 30px;
     max-width: 1050px;
 }
 
@@ -371,42 +370,67 @@ h3 {
 
 .section-one-a {
     display: flex;
+    margin-top: 20px;
 }
 
 .label-container1 {
     display: flex;
     flex-direction: column;
+    text-align: right;   
+    margin-top: 8px; 
+}
+
+.labels {
+    font-size: 13px;
+    margin: 8px;
 }
 
 .input-container1 {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    margin: 10px;
+}
+
+.input-top-left {
+    width: 250px;
+    height: 28px;
+    margin-bottom: 6px;
+}
+
+.text-box {
+    height: 80px;
+    
 }
 
 .section-one-b {
-    display: flex; 
+    display: flex;
+    margin-top: 20px;
+    margin-right: 40px;
+    border: 1px solid black;
 }
 
 .label-container2 {
     display: flex;
     flex-direction: column;
+    text-align: right;
+    margin: 10px;
 }
 
 .input-container2 {
     display: flex;
     flex-direction: column;
+    margin: 10px;
 }
 
-.section-two {
-    display: flex;
+.input-top-right {
+    width: 250px;
+    height: 26px;
+    margin-bottom: 6px;
 }
 
-.label-container3 {
-    display: flex;
-    flex-direction: column;
-}
-
-.input-container3 {
-    display: flex;
-    flex-direction: column;
+.info-button {
+    border: 1px solid black;
+    border-radius: 2px;
+    
 }

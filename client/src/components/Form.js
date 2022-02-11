@@ -12,6 +12,10 @@ const Form = () => {
             username
         }
     } = useContext(UserContext)
+
+    const d = new Date()
+    d.toDateString()
+
     return (
         <>
             {/* Top Inner Navigation */}
@@ -39,45 +43,38 @@ const Form = () => {
                 <div className="section-one-a">
                     <div className="label-container1">
                         <label className="labels" for="ticket_number">Number</label>
-                        <label for="caller_name">Caller</label>
-                        <label for="location">Location</label>
-                        <label for="knowledge">Knowledge</label>
-                        <label for="call-type">Call Type</label>
+                        <label className="labels" for="caller_name">Caller</label>
+                        <label className="labels" for="location">Location</label>
+                        <label className="labels" for="knowledge">Knowledge</label>
+                        <label className="labels" for="call-type">Call Type</label>
+                        <label className="labels" for="short-description">Short description</label>
+                        <label className="labels" for="description">Description</label>
                     </div>
                     <div className="input-container1">
                         <input id="ticket_number" className="input-top-left" type="text" placeholder="" value="CALL0000001" />
                         <input id="caller_name" className="input-top-left" type="text" placeholder="" />
                         <input id="location" className="input-top-left" type="text" placeholder="" />
                         <input id="knowledge" className="input-top-left" type="text" placeholder="" />
-                        <input id="call-type" className="input-top-left" type="text" placeholder="" /> 
+                        <input id="call-type" className="input-top-left" type="text" placeholder="" />
+                        <input type="text" className="input-top-left" placeholder="" />
+                        <input type="text" className="text-box" />    
                     </div>
                 </div>
                 <div className="section-one-b">
                     <div className="label-container2">
-                        <label for="timestamp">Opened</label>
-                        <label for="opened-by">Opened by</label>
-                        <label for="contact-method">Contact type</label>
+                        <label className="labels" for="timestamp">Opened</label>
+                        <label className="labels" for="opened-by">Opened by</label>
+                        <label className="labels" for="contact-method">Contact type</label>
                     </div>
                     <div className="input-container2">
                         <input id="timestamp" className="input-top-right" type="text" value={Date()}/>    
                         <span className="info-button-span">
                         <input id="opened-by" className="input-top-right" type="text" value={username} />
-                        <InfoOutlinedIcon style={{ fontSize: 16 }} className="info-button" /></span>
+                        <InfoOutlinedIcon style={{ fontSize: 24 }} className="info-button" /></span>
                         <input id="contact-method" className="input-top-right" type="text" placeholder="" />
                     </div>        
                 </div>
             </div>
-                
-            <div className="section-two">
-                <div className="label-container3">
-                    <label for="short-description">Short description</label>
-                    <label for="description">Description</label>
-                </div>
-                <div className="input-container3"> 
-                    <input type="text" className="input-bottom" placeholder="" />
-                    <textarea type="text" className="text-box" />
-                </div>
-            </div>    
             <div className="form-buttons">
                 <button className="submit-button2">Submit</button>
                 <button className="save-button2">Save</button>
