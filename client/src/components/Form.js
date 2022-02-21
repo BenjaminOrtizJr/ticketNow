@@ -47,8 +47,6 @@ const Form = () => {
                         <label className="labels" for="location">Location</label>
                         <label className="labels" for="knowledge">Knowledge</label>
                         <label className="labels" for="call-type">Call Type</label>
-                        <label className="labels" for="short-description">Short description</label>
-                        <label className="labels" for="description">Description</label>
                     </div>
                     <div className="input-container1">
                         <input id="ticket_number" className="input-top-left" type="text" placeholder="" value="CALL0000001" />
@@ -56,8 +54,6 @@ const Form = () => {
                         <input id="location" className="input-top-left" type="text" placeholder="" />
                         <input id="knowledge" className="input-top-left" type="text" placeholder="" />
                         <input id="call-type" className="input-top-left" type="text" placeholder="" />
-                        <input type="text" className="input-top-left" placeholder="" />
-                        <input type="text" className="text-box" />    
                     </div>
                 </div>
                 <div className="section-one-b">
@@ -67,14 +63,25 @@ const Form = () => {
                         <label className="labels" for="contact-method">Contact type</label>
                     </div>
                     <div className="input-container2">
-                        <input id="timestamp" className="input-top-right" type="text" value={Date()}/>    
-                        <span className="info-button-span">
+                        <input id="timestamp" className="input-top-right" type="text" value={Date()} />
+                        <div className="info-container"> 
                         <input id="opened-by" className="input-top-right" type="text" value={username} />
-                        <InfoOutlinedIcon style={{ fontSize: 24 }} className="info-button" /></span>
+                        <InfoOutlinedIcon style={{ fontSize: 24 }} className="info-button" />
+                        </div>   
                         <input id="contact-method" className="input-top-right" type="text" placeholder="" />
                     </div>        
                 </div>
             </div>
+                <div className="section-two">
+                    <div className="label-container3">
+                        <label className="labels" for="short-description">Short Description</label>
+                        <label className="labels" for="description">Description</label>
+                    </div>
+                    <div className="section-two-input">
+                        <input type="text" className="description" placeholder="" />
+                        <textarea type="text" className="text-box"></textarea>
+                    </div>    
+                </div>
             <div className="form-buttons">
                 <button className="submit-button2">Submit</button>
                 <button className="save-button2">Save</button>

@@ -354,10 +354,27 @@ h3 {
     border-radius: 3px;
 }
 
+.submit-button1:hover {
+    -webkit-box-shadow: 2px 2px 6px -1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 2px 2px 6px -1px rgba(0,0,0,0.75);
+    box-shadow: 2px 2px 6px -1px rgba(0,0,0,0.75);
+}
+
+.save-button1:hover {
+    -webkit-box-shadow: 2px 2px 6px -1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 2px 2px 6px -1px rgba(0,0,0,0.75);
+    box-shadow: 2px 2px 6px -1px rgba(0,0,0,0.75);
+}
+
+.back-icon:hover {
+    -webkit-box-shadow: 2px 2px 6px -1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 2px 2px 6px -1px rgba(0,0,0,0.75);
+    box-shadow: 2px 2px 6px -1px rgba(0,0,0,0.75);
+}
+
 /* Ticket Form Styles */
 
 .form-container {
-    border: 1px solid black;
     margin-left: auto;
     margin-right: auto;
     max-width: 1050px;
@@ -396,18 +413,18 @@ h3 {
     width: 250px;
     height: 28px;
     margin-bottom: 6px;
+    outline: none;
 }
 
-.text-box {
-    height: 80px;
-    
+#ticket_number, #timestamp, #opened-by {
+    background-color: lightgray;
 }
 
 .section-one-b {
     display: flex;
     margin-top: 20px;
     margin-right: 40px;
-    border: 1px solid black;
+    height: 150px;
 }
 
 .label-container2 {
@@ -427,10 +444,59 @@ h3 {
     width: 250px;
     height: 26px;
     margin-bottom: 6px;
+    outline: none;
+}
+
+.info-container {
+    display: flex;
 }
 
 .info-button {
     border: 1px solid black;
     border-radius: 2px;
-    
+    margin-left: 5px;
+}
+
+.section-two {
+    display: flex;
+}
+
+.label-container3 {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+}
+
+.section-two-input {
+    margin-top: 10px;
+    margin-left: 8px;
+}
+
+.description {
+    width: 884px;
+    margin-bottom: 16px;
+    height: 28px;
+    outline: none;
+}
+
+.text-box {
+    height: 80px;
+    width: 884px;
+    resize: none;
+    outline: none;
+}
+
+.form-buttons {
+    margin-top: 40px;
+    padding: 10px;
+}
+
+.form-buttons > button {
+    margin: 5px;
+}
+
+.form-buttons > button:hover {
+    -webkit-box-shadow: 2px 2px 6px -1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 2px 2px 6px -1px rgba(0,0,0,0.75);
+    box-shadow: 2px 2px 6px -1px rgba(0,0,0,0.75);
 }
