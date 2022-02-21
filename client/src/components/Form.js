@@ -63,7 +63,7 @@ const Form = () => {
                         <label className="labels" for="contact-method">Contact type</label>
                     </div>
                     <div className="input-container2">
-                        <input id="timestamp" className="input-top-right" type="text" value={Date()} />
+                        <input id="timestamp" className="input-top-right" type="text" value={d.toDateString()} />
                         <div className="info-container"> 
                         <input id="opened-by" className="input-top-right" type="text" value={username} />
                         <InfoOutlinedIcon style={{ fontSize: 24 }} className="info-button" />
@@ -82,11 +82,11 @@ const Form = () => {
                         <textarea type="text" className="text-box"></textarea>
                     </div>    
                 </div>
+            </form>
             <div className="form-buttons">
                 <button className="submit-button2">Submit</button>
                 <button className="save-button2">Save</button>
-            </div>          
-        </form>  
+            </div>  
         </>
     )
 }

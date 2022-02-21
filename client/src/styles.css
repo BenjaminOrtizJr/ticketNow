@@ -442,7 +442,7 @@ h3 {
 
 .input-top-right {
     width: 250px;
-    height: 26px;
+    height: 28px;
     margin-bottom: 6px;
     outline: none;
 }
@@ -474,7 +474,7 @@ h3 {
 
 .description {
     width: 884px;
-    margin-bottom: 16px;
+    margin-bottom: 8px;
     height: 28px;
     outline: none;
 }
@@ -488,11 +488,13 @@ h3 {
 
 .form-buttons {
     margin-top: 40px;
+    margin-left: 60px;
     padding: 10px;
 }
 
 .form-buttons > button {
     margin: 5px;
+    padding: 5px;
 }
 
 .form-buttons > button:hover {
