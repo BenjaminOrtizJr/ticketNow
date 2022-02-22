@@ -14,7 +14,6 @@ const Form = () => {
     } = useContext(UserContext)
 
     const d = new Date()
-    d.toDateString()
 
     return (
         <>
@@ -66,7 +65,7 @@ const Form = () => {
                         <input id="timestamp" className="input-top-right" type="text" value={d.toDateString()} />
                         <div className="info-container"> 
                         <input id="opened-by" className="input-top-right" type="text" value={username} />
-                        <InfoOutlinedIcon style={{ fontSize: 24 }} className="info-button" />
+                        <InfoOutlinedIcon className="info-button" />
                         </div>   
                         <input id="contact-method" className="input-top-right" type="text" placeholder="" />
                     </div>        
