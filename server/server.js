@@ -22,7 +22,8 @@ mongoose.connect("mongodb+srv://bortizjr84:silent84@ticketnow.x4jmz.mongodb.net/
 
 // Routes
 app.use('/auth', require('./routes/authRouter'))
-app.use('/api', expressJwt({ secret: process.env.SECRET, algorithms: ['HS256']})) 
+app.use('/api', expressJwt({ secret: process.env.SECRET, algorithms: ['HS256'] }))
+app.use('/api/ticket', require('./routes/ticketRouter'))
 
 
 // Error Handling

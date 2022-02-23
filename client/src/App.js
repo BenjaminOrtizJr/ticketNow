@@ -5,7 +5,7 @@ import { Switch, Route, Redirect } from "react-router-dom";
 import Auth from './components/Auth'
 import { UserContext } from './context/UserProvider'
 import ProtectedRoute from './components/ProtectedRoute'
-import Form from './components/Form';
+import TicketForm from './TicketForm';
 
 
 function App() {
@@ -20,7 +20,7 @@ function App() {
           />
         <ProtectedRoute
           path="/form"
-          component={Form}
+          component={TicketForm}
           redirectTo="/"
           token={token}    
         />    

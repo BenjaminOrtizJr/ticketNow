@@ -76,6 +76,39 @@ const UserProvider = (props) => {
         }))
     }
 
+    function getAllTickets() {
+        userAxios.get("/api/ticket")
+            .then(res => {
+                setUserState(prevState => ({
+                    ...prevState,
+                    tickets: res.data
+            }))
+            })
+            .catch(err => console.log(err.response.data.errMsg))
+    }
+
+    function getUserTickets() {
+        userAxios.get("/api/ticket/user")
+            .then(res => {
+                setUserState(prevState => ({
+                    ...prevState,
+                    tickets: res.data
+            }))
+            })
+            .catch(err => console.log(err.response.data.errMsg))
+    }
+
+    function addTicket(newTicket) {
+        userAxios.post("/api/ticket", newTicket)
+            .then(res => {
+                setUserState(prevState => ({
+                    ...prevState,
+                    tickets: [...prevState.tickets, res.data]
+            }))
+            })
+            .catch(err => console.log(err.response.data.errMsg))
+    }
+
     return (
         <UserContext.Provider
             value={{
@@ -83,7 +116,10 @@ const UserProvider = (props) => {
                 signup,
                 login,
                 logout,
-                resetAuthErr
+                resetAuthErr,
+                getAllTickets,
+                getUserTickets,
+                addTicket
             }}>
             {props.children}
         </UserContext.Provider>
