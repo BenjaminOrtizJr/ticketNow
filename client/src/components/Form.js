@@ -65,7 +65,7 @@ const Form = () => {
                         <input id="timestamp" className="input-top-right" type="text" value={d.toDateString()} />
                         <div className="info-container"> 
                         <input id="opened-by" className="input-top-right" type="text" value={username} />
-                        <InfoOutlinedIcon className="info-button" />
+                                <InfoOutlinedIcon style={{ fontSize: 27 }}className="info-button" />
                         </div>   
                         <input id="contact-method" className="input-top-right" type="text" placeholder="" />
                     </div>        
