@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-// import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import FilterListIcon from "@material-ui/icons/FilterList"
 import HomeOutlinedIcon from "@material-ui/icons/HomeOutlined"
 import AddIcon from "@material-ui/icons/Add"
@@ -25,11 +25,14 @@ export default function Nav(props) {
   const { logout } = props
   const {
     user: {
+      getAllTickets,
       username
     }
   } = useContext(UserContext)
 
   return (
+
+    // Top Nav
     <nav className="nav">
       <div className="nav__top">
         <div className="nav__top-title">
@@ -54,12 +57,13 @@ export default function Nav(props) {
         <button className="logout__button" onClick={logout}>LOGOUT</button>
       </div>
 
+      {/* Side Nav */}
      <div className="nav__side">
         <div className="filter__icon-container">
             <FilterListIcon className="filter-icon" aria-label="filter"/>
         </div>
         <div className="home__icon-container"> 
-            <HomeOutlinedIcon className="home-icon" aria-label="home"/>
+           <Link to="/form"> <HomeOutlinedIcon className="home-icon" aria-label="home"/></Link>
         </div>
         <div className="add__icon-container">
             <AddIcon className="add-icon" aria-label="add"/>
@@ -68,7 +72,7 @@ export default function Nav(props) {
             <InfoOutlinedIcon className="info-icon" aria-label="information"/>
         </div>
         <div className="storage__icon-container">
-            <StorageRoundedIcon className="storage-icon" aria-label="storage"/>
+            <Link to="/ticketqueue" onClick={getAllTickets}><StorageRoundedIcon className="storage-icon" aria-label="storage"/></Link>
         </div>
         <div className="ticket__icon-container">
             <ConfirmationNumberOutlinedIcon className="ticket-icon" aria-label="tickets"/>

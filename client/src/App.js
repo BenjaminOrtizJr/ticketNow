@@ -5,12 +5,12 @@ import { Switch, Route, Redirect } from "react-router-dom";
 import Auth from './components/Auth'
 import { UserContext } from './context/UserProvider'
 import ProtectedRoute from './components/ProtectedRoute'
-// import TicketForm from './components/TicketForm';
+import TicketForm from './components/TicketForm';
 import TicketQueue from './components/TicketQueue';
 
 
 function App() {
-  const { token, logout } = useContext(UserContext)
+  const { token, logout, addTicket, getAllTickets } = useContext(UserContext)
   
   return (
     <div className="App">
@@ -21,17 +21,18 @@ function App() {
           />
         <ProtectedRoute
           path="/form"
-          component={TicketQueue}
+          component={TicketForm}
           redirectTo="/"
-          token={token}    
+          token={token}
+          addTicket={addTicket}
         />
-        {/* <ProtectedRoute
-          path="/globalQueue"
-          component={GlobalQueue}
+        <ProtectedRoute
+          path="/ticketqueue"
+          component={TicketQueue}
           redirectTo="/"
           token={token}
           getAllTickets={getAllTickets}
-        />  */}
+        /> 
         </Switch>
     </div>
   );
