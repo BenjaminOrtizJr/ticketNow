@@ -27,8 +27,7 @@ const ticketSchema = new Schema({
         required: true
     },
     openedBy: {
-        type: String,
-        required: true
+        type: String
     },
     opened: {
         type: Date,

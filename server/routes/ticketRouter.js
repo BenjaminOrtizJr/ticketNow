@@ -39,12 +39,12 @@ ticketRouter.get("/:ticketId", (req, res, next) => {
 ticketRouter.post("/", (req, res, next) => {
     req.body.user = req.user._id
     const newTicket = new ticket(req.body)
-    newTicket.save((err, saveTicket) => {
+    newTicket.save((err, savedTicket) => {
         if (err) {
             res.status(500)
             return next(err)
         }
-        return res.status(201).send(saveTicket)
+        return res.status(201).send(savedTicket)
     })
 })
 

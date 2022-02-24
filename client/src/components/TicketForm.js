@@ -1,10 +1,10 @@
-import React, { useContext, useState } from 'react';
+import React, { useState } from 'react';
 import InfoOutlinedIcon from '@material-ui/icons/InfoOutlined';
 import ArrowBackIosOutlinedIcon from '@material-ui/icons/ArrowBackIosOutlined'
 import MenuOutlinedIcon from '@material-ui/icons/MenuOutlined'
 import AttachFileOutlinedIcon from '@material-ui/icons/AttachFileOutlined'
 import MoreHorizOutlinedIcon from '@material-ui/icons/MoreHorizOutlined'
-import { UserContext } from './context/UserProvider'
+// import { UserContext } from '../context/UserProvider'
 
 const initialInputs = {
     ticketNumber: 1,
@@ -19,17 +19,9 @@ const initialInputs = {
     description: "",
     }
 
-const Form = (props) => {
+const TicketForm = (props) => {
     const [inputs, setInputs] = useState(initialInputs)
-    const { addTicket } = props
-    
-    const {
-        user: {
-            username
-        }
-    } = useContext(UserContext)
-
-    // const d = new Date()
+    const {addTicket} = props
 
     function handleChange(e) {
         const { name, value } = e.target
@@ -46,6 +38,14 @@ const Form = (props) => {
     }
 
     const {ticketNumber, caller, location, knowledge, callType, contactType, openedBy, opened, shortDescription, description} = inputs
+
+    //  const {
+    //     user: {
+    //         username
+    //     }
+    // } = useContext(UserContext)
+
+    // const d = new Date()
 
     return (
         <>
@@ -136,12 +136,11 @@ const Form = (props) => {
                             <input id="opened-by"
                                     className="input-top-right"
                                     type="text"
-                                    name="username"
+                                    name="openedBy"
                                     value={openedBy}
-                                    placeholder={username}
                                     onChange={handleChange}
-                                    required />
-                                <InfoOutlinedIcon style={{ fontSize: 27 }}className="info-button" />
+                                    />
+                                <InfoOutlinedIcon style={{ fontSize: 27 }} className="info-button" />
                         </div>   
                             <input id="contact-method"
                                 className="input-top-right"
@@ -182,4 +181,4 @@ const Form = (props) => {
         </>
     )
 }
-export default Form
+export default TicketForm
