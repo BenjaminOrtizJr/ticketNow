@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import InfoOutlinedIcon from '@material-ui/icons/InfoOutlined';
 import ArrowBackIosOutlinedIcon from '@material-ui/icons/ArrowBackIosOutlined'
 import MenuOutlinedIcon from '@material-ui/icons/MenuOutlined'
 import AttachFileOutlinedIcon from '@material-ui/icons/AttachFileOutlined'
 import MoreHorizOutlinedIcon from '@material-ui/icons/MoreHorizOutlined'
-// import { UserContext } from '../context/UserProvider'
+import { UserContext } from '../context/UserProvider'
 
 const initialInputs = {
     ticketNumber: 1,
@@ -39,16 +39,17 @@ const TicketForm = (props) => {
 
     const {ticketNumber, caller, location, knowledge, callType, contactType, openedBy, opened, shortDescription, description} = inputs
 
-    //  const {
-    //     user: {
-    //         username
-    //     }
-    // } = useContext(UserContext)
+     const {
+        user: {
+            username
+        }
+    } = useContext(UserContext)
 
-    // const d = new Date()
+    const d = new Date()
 
     return (
         <>
+
             {/* Top Inner Navigation */}
         <div className="top-inner-nav">
             <div className="inner-nav-box1">
@@ -63,7 +64,7 @@ const TicketForm = (props) => {
                 <AttachFileOutlinedIcon className="paperclip-icon" aria-label="attachment" />
                 <MoreHorizOutlinedIcon className="more-icon" aria-label="more-options" />
                 <button className="submit-button1" onClick={handleSubmit}>Submit</button>
-                <button className="save-button1">Save</button>        
+                <button className="save-button1" onClick={handleSubmit}>Save</button>        
             </div>
         </div>
             
@@ -92,7 +93,7 @@ const TicketForm = (props) => {
                                 name="caller"
                                 value={caller}
                                 onChange={handleChange}
-                                required />
+                                required={true} />
                         <input id="location"
                                 className="input-top-left"
                                 type="text"

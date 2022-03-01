@@ -83,7 +83,9 @@ export default function Nav(props) {
         {/* <div className="play__icon-container">
             <PlayCircleOutlineRoundedIcon className="play-icon" aria-label="play" />      
         </div> */}
-    </div>
+      </div>
+      
+      
     </nav>  
   )
 };

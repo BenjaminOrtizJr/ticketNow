@@ -76,6 +76,7 @@
   width: 100%;
   height: 50px;
   display: flex;
+  position: relative;
 }
 
 .user__section {
@@ -282,6 +283,7 @@ h3 {
     background-color: lightgray;
     display: flex;
     justify-content: space-between;
+    
 }
 
 .back-icon {
@@ -509,14 +511,23 @@ h3 {
 
 /* Ticket Queue */
 
+.ticket-queue > h1 {
+    margin-left: 60px;
+}
+
+
+
+/* Ticket */
+
 .ticket-container {
     display: flex;
     margin-left: 52px;
-    margin-right: 3px;
+    margin-right: auto;
     
 }
 
 .ticket-container > p {
     border: .2px solid black;
     padding: 5px;
+    height: 100%;
 }
