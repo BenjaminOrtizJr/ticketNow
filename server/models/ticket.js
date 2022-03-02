@@ -3,8 +3,7 @@ const Schema = mongoose.Schema
 
 const ticketSchema = new Schema({
     ticketNumber: {
-        type: Number,
-        required: true
+        type: String
     },
     caller: {
         type: String,
@@ -30,8 +29,8 @@ const ticketSchema = new Schema({
         type: String
     },
     opened: {
-        type: Date,
-        default: Date.now
+        type: String
+        
     },
     shortDescription: {
         type: String,

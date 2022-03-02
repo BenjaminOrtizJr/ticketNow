@@ -6,12 +6,12 @@ const TicketQueue = (props) => {
 
     const {
         tickets,
-        getUserTickets
+        getAllTickets
     } = useContext(UserContext)
     
 
     useEffect(() => {
-        getUserTickets()
+        getAllTickets()
     }, [])
     
     return (

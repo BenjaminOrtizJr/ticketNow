@@ -7,7 +7,7 @@ import MoreHorizOutlinedIcon from '@material-ui/icons/MoreHorizOutlined'
 import { UserContext } from '../context/UserProvider'
 
 const initialInputs = {
-    ticketNumber: 1,
+    ticketNumber: "",
     caller: "",
     location: "",
     knowledge: "",
@@ -37,7 +37,7 @@ const TicketForm = (props) => {
         setInputs(initialInputs)
     }
 
-    const {ticketNumber, caller, location, knowledge, callType, contactType, openedBy, opened, shortDescription, description} = inputs
+    const {ticketNumber, caller, location, knowledge, callType, contactType, openedBy, opened, shortDescription, description, _id} = inputs
 
      const {
         user: {
@@ -46,7 +46,7 @@ const TicketForm = (props) => {
     } = useContext(UserContext)
 
     const d = new Date()
-
+    
     return (
         <>
 
@@ -85,7 +85,7 @@ const TicketForm = (props) => {
                                 className="input-top-left"
                                 type="text"
                                 name="ticketNumber"
-                                value={ticketNumber}
+                                value={_id}
                                 onChange={handleChange} />
                         <input id="caller_name"
                                 className="input-top-left"
@@ -93,7 +93,7 @@ const TicketForm = (props) => {
                                 name="caller"
                                 value={caller}
                                 onChange={handleChange}
-                                required={true} />
+                                required />
                         <input id="location"
                                 className="input-top-left"
                                 type="text"
@@ -127,9 +127,9 @@ const TicketForm = (props) => {
                             <input
                                 id="timestamp"
                                 className="input-top-right"
-                                type="date"
+                                type="text"
                                 name="opened"
-                                placeholder={Date.toString()}
+                                placeholder={d.toString()}
                                 value={opened}
                                 onChange={handleChange}
                                 required />

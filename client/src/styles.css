@@ -417,6 +417,7 @@ h3 {
     margin-bottom: 6px;
     outline: none;
     border: .2px solid black;
+    border-radius: 3px;
 }
 
 #ticket_number, #timestamp, #opened-by {
@@ -449,10 +450,12 @@ h3 {
     margin-bottom: 6px;
     outline: none;
     border: .2px solid black;
+    border-radius: 3px;
 }
 
 .info-container {
     display: flex;
+    border-radius: 3px;
 }
 
 .info-button {
@@ -482,6 +485,7 @@ h3 {
     height: 32px;
     outline: none;
     border: .2px solid black;
+    border-radius: 3px;
 }
 
 .text-box {
@@ -490,6 +494,7 @@ h3 {
     resize: none;
     outline: none;
     border: .2px solid black;
+    border-radius: 3px;
 }
 
 .form-buttons {
@@ -523,11 +528,88 @@ h3 {
     display: flex;
     margin-left: 52px;
     margin-right: auto;
-    
+    max-width: 97.2%;
+    /* border-bottom: .2px solid black; */
+    margin-top: 1px;
+    align-items: center;
+    justify-content: center;
 }
 
 .ticket-container > p {
-    border: .2px solid black;
+    /* border-top: .2px solid black; */
+    margin-top: auto;
+    margin-bottom: auto;
     padding: 5px;
-    height: 100%;
+    height: 50px;
+    font-size: 12px;
+    width: 100%;
+    
+    overflow: hidden;
+}
+
+.ticket-container:nth-child(odd) {
+    background-color: lightgray;
+}
+
+.ticket-container-checkbox {
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.ticket-container-number {
+
+}
+
+.ticket-container-caller {
+
+}
+
+.ticket-container-location {
+
+}
+
+.ticket-container-knowledge {
+
+}
+
+.ticket-container-calltype {
+
+}
+
+.ticket-container-contacttype {
+
+}
+
+.ticket-container-openedby {
+
+}
+
+.ticket-container-opened {
+
+}
+
+.ticket-container-shortdescription {
+
+}
+
+.ticket-container-description {
+
+}
+
+.edit-button {
+
+}
+
+.edit-button:hover {
+
+}
+
+.delete-button {
+
+}
+
+.delete-button:hover {
+
 }
