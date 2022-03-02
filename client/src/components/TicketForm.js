@@ -10,7 +10,7 @@ const initialInputs = {
     ticketNumber: "",
     caller: "",
     location: "",
-    knowledge: "",
+    priority: "",
     callType: "",
     contactType: "",
     openedBy: "",
@@ -37,15 +37,13 @@ const TicketForm = (props) => {
         setInputs(initialInputs)
     }
 
-    const {ticketNumber, caller, location, knowledge, callType, contactType, openedBy, opened, shortDescription, description, _id} = inputs
+    const {ticketNumber, caller, location, priority, callType, contactType, openedBy, opened, shortDescription, description, _id} = inputs
 
      const {
         user: {
             username
         }
     } = useContext(UserContext)
-
-    const d = new Date()
     
     return (
         <>
@@ -77,7 +75,7 @@ const TicketForm = (props) => {
                         <label className="labels" for="ticket_number">Number</label>
                         <label className="labels" for="caller_name">Caller</label>
                         <label className="labels" for="location">Location</label>
-                        <label className="labels" for="knowledge">Knowledge</label>
+                        <label className="labels" for="priority">-*Priority*-</label>
                         <label className="labels" for="call-type">Call Type</label>
                     </div>
                     <div className="input-container1">
@@ -85,8 +83,11 @@ const TicketForm = (props) => {
                                 className="input-top-left"
                                 type="text"
                                 name="ticketNumber"
+                                placeholder='###-###-###'
                                 value={_id}
-                                onChange={handleChange} />
+                                onChange={handleChange}
+                                disabled
+                            />
                         <input id="caller_name"
                                 className="input-top-left"
                                 type="text"
@@ -101,11 +102,11 @@ const TicketForm = (props) => {
                                 value={location}
                                 onChange={handleChange}
                                 required />
-                        <input id="knowledge"
+                        <input id="priority"
                                 className="input-top-left"
                                 type="text"
-                                name="knowledge"
-                                value={knowledge}
+                                name="priority"
+                                value={priority}
                                 onChange={handleChange}
                                 required />
                         <input id="call-type"
@@ -127,20 +128,21 @@ const TicketForm = (props) => {
                             <input
                                 id="timestamp"
                                 className="input-top-right"
-                                type="text"
+                                type="date"
                                 name="opened"
-                                placeholder={d.toString()}
                                 value={opened}
                                 onChange={handleChange}
-                                required />
+                                required
+                                 />
                         <div className="info-container"> 
                             <input id="opened-by"
-                                    className="input-top-right"
-                                    type="text"
-                                    name="openedBy"
-                                    value={openedBy}
-                                    onChange={handleChange}
-                                    />
+                                className="input-top-right"
+                                type="text"
+                                name="openedBy"
+                                value={openedBy}
+                                onChange={handleChange}
+                                required
+                                />
                                 <InfoOutlinedIcon style={{ fontSize: 27 }} className="info-button" />
                         </div>   
                             <input id="contact-method"

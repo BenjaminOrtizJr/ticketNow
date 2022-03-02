@@ -63,10 +63,10 @@ export default function Nav(props) {
             <FilterListIcon className="filter-icon" aria-label="filter"/>
         </div>
         <div className="home__icon-container"> 
-           <Link to="/form"> <HomeOutlinedIcon className="home-icon" aria-label="home"/></Link>
+            <HomeOutlinedIcon className="home-icon" aria-label="home"/>
         </div>
         <div className="add__icon-container">
-            <AddIcon className="add-icon" aria-label="add"/>
+            <Link to="/form"> <AddIcon className="add-icon" aria-label="add"/> </Link>
         </div>
         <div className="info__icon-container">
             <InfoOutlinedIcon className="info-icon" aria-label="information"/>

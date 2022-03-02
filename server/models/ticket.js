@@ -13,7 +13,7 @@ const ticketSchema = new Schema({
         type: String,
         required: true
     },
-    knowledge: {
+    priority: {
         type: String,
         required: true
     },
@@ -30,7 +30,6 @@ const ticketSchema = new Schema({
     },
     opened: {
         type: String
-        
     },
     shortDescription: {
         type: String,
