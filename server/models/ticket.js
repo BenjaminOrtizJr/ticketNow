@@ -29,7 +29,8 @@ const ticketSchema = new Schema({
         type: String
     },
     opened: {
-        type: String
+        type: String,
+        default: Date.now()
         
     },
     shortDescription: {

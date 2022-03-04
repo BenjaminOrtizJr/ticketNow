@@ -10,7 +10,7 @@ import TicketQueue from './components/TicketQueue';
 
 
 function App() {
-  const { token, logout, addTicket, getUserTickets } = useContext(UserContext)
+  const { token, logout, addTicket } = useContext(UserContext)
   
   return (
     <div className="App">
@@ -31,7 +31,6 @@ function App() {
           component={TicketQueue}
           redirectTo="/"
           token={token}
-          getUserTickets={getUserTickets}
         /> 
         </Switch>
     </div>

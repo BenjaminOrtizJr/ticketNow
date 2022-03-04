@@ -130,7 +130,7 @@ const TicketForm = (props) => {
                                 type="text"
                                 name="opened"
                                 placeholder={d.toString()}
-                                value={opened}
+                                value={d}
                                 onChange={handleChange}
                                 required />
                         <div className="info-container"> 
