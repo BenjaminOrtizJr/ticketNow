@@ -13,7 +13,7 @@ const ticketSchema = new Schema({
         type: String,
         required: true
     },
-    knowledge: {
+    priority: {
         type: String,
         required: true
     },
@@ -29,9 +29,13 @@ const ticketSchema = new Schema({
         type: String
     },
     opened: {
+<<<<<<< HEAD
         type: String,
         default: Date.now()
         
+=======
+        type: String
+>>>>>>> 660d63800cfdca47871c7bf359972213e9c59d0f
     },
     shortDescription: {
         type: String,

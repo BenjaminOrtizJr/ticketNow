@@ -520,8 +520,34 @@ h3 {
     margin-left: 60px;
 }
 
+.edit-form {
+    border: .2x solid black;
+    margin-left: 80px;
+    display: flex;
+    
+}
 
+.edit-form > input {
 
+}
+
+.edit-location {
+
+}
+
+.edit-opened {
+
+}
+
+.edit-openedby {
+
+}
+
+.edit-contacttype {
+
+}
+
+.edit-number
 /* Ticket */
 
 .ticket-container {
@@ -570,7 +596,7 @@ h3 {
 
 }
 
-.ticket-container-knowledge {
+.ticket-container-priority {
 
 }
 
