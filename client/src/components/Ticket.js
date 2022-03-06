@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 import { UserContext } from '../context/UserProvider'
 
 const Ticket = (props) => {
-  const { _id, ticketNumber, caller, location, priority, callType, contactType, openedBy, opened, shortDescription, description, completed } = props
+  const { ticketNumber, caller, location, priority, callType, contactType, openedBy, opened, shortDescription, description } = props
 
   const {
     deleteTicket
@@ -11,7 +11,7 @@ const Ticket = (props) => {
   return (
     <div className="ticket-container">
       <input className="ticket-container-checkbox" type="checkbox"  />
-      <p className="ticket-container-number">{_id}</p>
+      <p className="ticket-container-number">{ticketNumber}</p>
       <p className="ticket-container-caller">{caller}</p>
       <p className="ticket-container-location">{location}</p>
       <p className="ticket-container-priority">{priority}</p>

@@ -22,7 +22,7 @@ const UserProvider = (props) => {
     const [userState, setUserState] = useState(initialState)
 
 
-    function signup(credentials){
+    const signup = (credentials) => {
         axios.post("/auth/signup", credentials)
             .then(res => {
                 const { user, token } = res.data
@@ -37,7 +37,7 @@ const UserProvider = (props) => {
             .catch(err => handleAuthErr(err.response.data.errMsg))
     }
 
-    function login(credentials){
+    const login = (credentials) => {
         axios.post("/auth/login", credentials)
             .then(res => {
                 const { user, token } = res.data
@@ -52,7 +52,7 @@ const UserProvider = (props) => {
             .catch(err => handleAuthErr(err.response.data.errMsg))
     }
 
-    function logout(){
+    const logout = () => {
         localStorage.removeItem("token")
         localStorage.removeItem("user")
         setUserState({
@@ -62,21 +62,21 @@ const UserProvider = (props) => {
         })
     }
 
-    function handleAuthErr(errMsg){
+    const handleAuthErr = (errMsg) => {
         setUserState(prevState => ({
             ...prevState,
             errMsg
         }))
     }
 
-    function resetAuthErr(){
+    const resetAuthErr = () => {
         setUserState(prevState => ({
             ...prevState,
             errMsg: ""
         }))
     }
 
-    function getAllTickets() {
+    const getAllTickets = () => {
         userAxios.get("/api/ticket")
             .then(res => {
                 setUserState(prevState => ({
@@ -87,7 +87,7 @@ const UserProvider = (props) => {
             .catch(err => console.log(err.response.data.errMsg))
     }
 
-    function getUserTickets() {
+    const getUserTickets = () => {
         userAxios.get("/api/ticket/user")
             .then(res => {
                 setUserState(prevState => ({
@@ -98,7 +98,7 @@ const UserProvider = (props) => {
             .catch(err => console.log(err.response.data.errMsg))
     }
 
-    function addTicket(newTicket) {
+    const addTicket = (newTicket) => {
         userAxios.post("/api/ticket", newTicket)
             .then(res => {
                 setUserState(prevState => ({
@@ -109,11 +109,19 @@ const UserProvider = (props) => {
             .catch(err => console.log(err.response.data.errMsg))
     }
 
-    function deleteTicket(ticketId) {
-        userAxios.delete("/api/ticket", ticketId)
+    const deleteTicket = (ticketId) => {
+        userAxios.delete(`/api/ticket/${ticketId}`)
             .then(res => {
                 setUserState(prevState => 
                 prevState.filter(ticket => ticket._id !== ticketId))
+            })
+            .catch(err => console.log(err.response.data.errMsg))
+    }
+
+    const editTicket = (updates, ticketId) => {
+        axios.put(`/api/ticket/${ticketId}`, updates)
+            .then(res => {
+            setUserState(prevState => prevState.map(ticket => ticket._id !== ticketId ? ticket : res.data))
             })
             .catch(err => console.log(err.response.data.errMsg))
     }
@@ -129,7 +137,8 @@ const UserProvider = (props) => {
                 getAllTickets,
                 getUserTickets,
                 addTicket,
-                deleteTicket
+                deleteTicket,
+                editTicket
             }}>
             {props.children}
         </UserContext.Provider>

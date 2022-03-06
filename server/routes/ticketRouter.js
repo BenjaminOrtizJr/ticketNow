@@ -71,7 +71,7 @@ ticketRouter.delete("/:ticketId", (req, res, next) => {
             res.status(500)
             return next(err)
         }
-        return res.status(200).send(`Successfully deleted ticket ${deletedTicket.ticketname} from database!`)
+        return res.status(200).send("Successfully deleted ticket from database!")
     })
 })
 

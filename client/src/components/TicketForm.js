@@ -1,10 +1,9 @@
-import React, { useState, useContext } from 'react';
+import React, { useState } from 'react';
 import InfoOutlinedIcon from '@material-ui/icons/InfoOutlined';
 import ArrowBackIosOutlinedIcon from '@material-ui/icons/ArrowBackIosOutlined'
 import MenuOutlinedIcon from '@material-ui/icons/MenuOutlined'
 import AttachFileOutlinedIcon from '@material-ui/icons/AttachFileOutlined'
 import MoreHorizOutlinedIcon from '@material-ui/icons/MoreHorizOutlined'
-import { UserContext } from '../context/UserProvider'
 
 const initialInputs = {
     ticketNumber: "",
@@ -37,13 +36,13 @@ const TicketForm = (props) => {
         setInputs(initialInputs)
     }
 
-    const {ticketNumber, caller, location, priority, callType, contactType, openedBy, opened, shortDescription, description, _id} = inputs
+    const {caller, location, priority, callType, contactType, openedBy, opened, shortDescription, description, _id} = inputs
 
-     const {
-        user: {
-            username
-        }
-    } = useContext(UserContext)
+    //  const {
+    //     user: {
+    //         username
+    //     }
+    // } = useContext(UserContext)
     
     return (
         <>
