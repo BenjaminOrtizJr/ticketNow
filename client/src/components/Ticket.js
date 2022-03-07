@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 import { UserContext } from '../context/UserProvider'
 
 const Ticket = (props) => {
-  const { ticketNumber, caller, location, priority, callType, contactType, openedBy, opened, shortDescription, description } = props
+  const { ticketNumber, caller, location, priority, callType, contactType, openedBy, opened, shortDescription, description, _id } = props
 
   const {
     deleteTicket
