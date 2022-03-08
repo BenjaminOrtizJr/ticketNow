@@ -25,7 +25,7 @@ export default function Nav(props) {
   const { logout } = props
   const {
     user: {
-      getAllTickets,
+      
       username
     }
   } = useContext(UserContext)
@@ -72,7 +72,7 @@ export default function Nav(props) {
             <InfoOutlinedIcon className="info-icon" aria-label="information"/>
         </div>
         <div className="storage__icon-container">
-            <Link to="/ticketqueue" onClick={getAllTickets}><StorageRoundedIcon className="storage-icon" aria-label="storage"/></Link>
+            <Link to="/ticketqueue" ><StorageRoundedIcon className="storage-icon" aria-label="storage"/></Link>
         </div>
         <div className="ticket__icon-container">
             <ConfirmationNumberOutlinedIcon className="ticket-icon" aria-label="tickets"/>
