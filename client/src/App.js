@@ -1,12 +1,13 @@
 import React, {useContext} from 'react'
-import "./styles.css";
-import Nav from "./components/Nav/Nav";
-import { Switch, Route, Redirect } from "react-router-dom";
+import "./styles.css"
+import Nav from "./components/Nav/Nav"
+import { Switch, Route, Redirect } from "react-router-dom"
 import Auth from './components/Auth'
 import { UserContext } from './context/UserProvider'
 import ProtectedRoute from './components/ProtectedRoute'
-import TicketForm from './components/TicketForm';
-import TicketQueue from './components/TicketQueue';
+import TicketForm from './components/TicketForm'
+import TicketQueue from './components/TicketQueue'
+import GlobalQueue from './components/GlobalQueue'
 
 
 function App() {
@@ -31,7 +32,13 @@ function App() {
           component={TicketQueue}
           redirectTo="/"
           token={token}
-        /> 
+        />
+        <ProtectedRoute
+          path="/globalqueue"
+          component={GlobalQueue}
+          redirectTo="/"
+          token={token}
+        />
         </Switch>
     </div>
   );

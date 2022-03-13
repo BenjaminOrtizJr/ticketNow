@@ -2,23 +2,23 @@ import React, { useContext, useEffect } from 'react'
 import TicketList from '../components/TicketList'
 import { UserContext } from '../context/UserProvider'
 
-const TicketQueue = (props) => {
+const GlobalQueue = (props) => {
 // test
     const {
         tickets,
-        getUserTickets
+        getAllTickets
     } = useContext(UserContext)
     
     useEffect(() => {
-        getUserTickets()
+        getAllTickets()
     }, [])
     
     return (
         <div className="ticket-queue">
-            <h1>My Tickets</h1>
+            <h1>Global Queue</h1>
             <TicketList tickets={tickets} />
         </div>
     )
 }
 
-export default TicketQueue
+export default GlobalQueue

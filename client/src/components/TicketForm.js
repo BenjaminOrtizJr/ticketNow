@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import InfoOutlinedIcon from '@material-ui/icons/InfoOutlined';
 import ArrowBackIosOutlinedIcon from '@material-ui/icons/ArrowBackIosOutlined'
 import MenuOutlinedIcon from '@material-ui/icons/MenuOutlined'
 import AttachFileOutlinedIcon from '@material-ui/icons/AttachFileOutlined'
 import MoreHorizOutlinedIcon from '@material-ui/icons/MoreHorizOutlined'
+import { UserContext } from '../context/UserProvider'
 
 const initialInputs = {
     ticketNumber: "",
@@ -36,13 +37,13 @@ const TicketForm = (props) => {
         setInputs(initialInputs)
     }
 
-    const {caller, location, priority, callType, contactType, openedBy, opened, shortDescription, description, _id} = inputs
+    const {caller, location, priority, callType, contactType, openedBy, opened, shortDescription, description, ticketNumber} = inputs
 
-    //  const {
-    //     user: {
-    //         username
-    //     }
-    // } = useContext(UserContext)
+     const {
+        user: {
+            username
+        }
+    } = useContext(UserContext)
     
     return (
         <>
@@ -82,10 +83,9 @@ const TicketForm = (props) => {
                                 className="input-top-left"
                                 type="text"
                                 name="ticketNumber"
-                                placeholder='###-###-###'
-                                value={_id}
+                                placeholder='#########'
+                                value={ticketNumber}
                                 onChange={handleChange}
-                                disabled
                             />
                         <input id="caller_name"
                                 className="input-top-left"
@@ -93,28 +93,28 @@ const TicketForm = (props) => {
                                 name="caller"
                                 value={caller}
                                 onChange={handleChange}
-                                required />
+                                required={true} />
                         <input id="location"
                                 className="input-top-left"
                                 type="text"
                                 name="location"
                                 value={location}
                                 onChange={handleChange}
-                                required />
+                                required={true} />
                         <input id="priority"
                                 className="input-top-left"
                                 type="text"
                                 name="priority"
                                 value={priority}
                                 onChange={handleChange}
-                                required />
+                                required={true} />
                         <input id="call-type"
                                 className="input-top-left"
                                 type="text"
                                 name='callType'
                                 value={callType}
                                 onChange={handleChange}
-                                required />
+                                required={true} />
                     </div>
                 </div>
                 <div className="section-one-b">
@@ -131,16 +131,17 @@ const TicketForm = (props) => {
                                 name="opened"
                                 value={opened}
                                 onChange={handleChange}
-                                required
+                                required={true}
                                  />
                         <div className="info-container"> 
                             <input id="opened-by"
                                 className="input-top-right"
                                 type="text"
                                 name="openedBy"
-                                value={openedBy}
+                                placeholder={username}
+                                value={openedBy.username}
                                 onChange={handleChange}
-                                required
+                                required={true}
                                 />
                                 <InfoOutlinedIcon style={{ fontSize: 27 }} className="info-button" />
                         </div>   
@@ -150,7 +151,7 @@ const TicketForm = (props) => {
                                 name="contactType"
                                 value={contactType}
                                 onChange={handleChange}
-                                required />
+                                required={true} />
                     </div>        
                 </div>
             </div>
@@ -165,13 +166,13 @@ const TicketForm = (props) => {
                             name="shortDescription"
                             value={shortDescription}
                             onChange={handleChange}
-                            required />
+                            required={true} />
                         <textarea type="text"
                             className="text-box"
                             name="description"
                             value={description}
                             onChange={handleChange}
-                            required>
+                            required={true}>
                         </textarea>
                     </div>    
                 </div>
