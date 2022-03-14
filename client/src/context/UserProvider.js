@@ -4,7 +4,7 @@ import axios from 'axios'
 export const UserContext = React.createContext()
 
 const userAxios = axios.create({
-    baseURL: "https://ticketnowapp.herokuapp.com/api"   // heroku url (backend)
+    baseURL: "https://ticketnowapp.herokuapp.com/api/"   // heroku url (backend)
 })
 
 userAxios.interceptors.request.use(config => {
