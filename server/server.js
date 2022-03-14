@@ -1,7 +1,7 @@
 // Server
 const express = require('express')
 const app = express()
-require('dotenv').config()
+const dotenv = require('dotenv').config()
 const morgan = require('morgan')
 const mongoose = require('mongoose')
 const expressJwt = require('express-jwt')
@@ -12,7 +12,7 @@ app.use(express.json())
 app.use(morgan('dev'))
 
 // DB Connection
-mongoose.connect("mongodb+srv://bortizjr84:silent84@ticketnow.x4jmz.mongodb.net/ticketNow?retryWrites=true&w=majority",
+mongoose.connect(process.env.MONGO_URL,
 {
     useNewUrlParser: true,
     useUnifiedTopology: true
@@ -21,7 +21,7 @@ mongoose.connect("mongodb+srv://bortizjr84:silent84@ticketnow.x4jmz.mongodb.net/
 .catch(err => console.log(err.message))
 
 // Routes
-app.use('/auth', require('./routes/authRouter'))
+app.use('/api/auth', require('./routes/authRouter'))
 app.use('/api', expressJwt({ secret: process.env.SECRET, algorithms: ['HS256'] }))
 app.use('/api/ticket', require('./routes/ticketRouter'))
 

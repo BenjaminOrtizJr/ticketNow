@@ -23,7 +23,7 @@ const UserProvider = (props) => {
 
 
     const signup = (credentials) => {
-        axios.post("/auth/signup", credentials)
+        axios.post("/api/auth/signup", credentials)
             .then(res => {
                 const { user, token } = res.data
                 localStorage.setItem("token", token)
@@ -38,7 +38,7 @@ const UserProvider = (props) => {
     }
 
     const login = (credentials) => {
-        axios.post("/auth/login", credentials)
+        axios.post("/api/auth/login", credentials)
             .then(res => {
                 const { user, token } = res.data
                 localStorage.setItem("token", token)

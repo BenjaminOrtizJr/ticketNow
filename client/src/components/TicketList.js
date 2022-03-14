@@ -1,4 +1,4 @@
-import React, {useContext} from 'react'
+import React from 'react'
 import Ticket from '../components/Ticket'
 
 const TicketList = (props) => {
