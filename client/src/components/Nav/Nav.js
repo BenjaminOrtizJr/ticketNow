@@ -62,13 +62,13 @@ export default function Nav(props) {
             <FilterListIcon className="filter-icon" aria-label="filter"/>
         </div>
         <div className="home__icon-container"> 
-            <HomeOutlinedIcon className="home-icon" aria-label="home"/>
+            <Link to="/home"><HomeOutlinedIcon className="home-icon" aria-label="home"/></Link>
         </div>
         <div className="add__icon-container">
             <Link to="/form"> <AddIcon className="add-icon" aria-label="add"/> </Link>
         </div>
         <div className="info__icon-container">
-            <InfoOutlinedIcon className="info-icon" aria-label="information"/>
+            <Link to="/info"><InfoOutlinedIcon className="info-icon" aria-label="information"/></Link>
         </div>
         <div className="storage__icon-container">
             <Link to="/ticketqueue" ><StorageRoundedIcon className="storage-icon" aria-label="storage"/></Link>
@@ -77,7 +77,7 @@ export default function Nav(props) {
             <Link to="/globalqueue"><ConfirmationNumberOutlinedIcon className="ticket-icon" aria-label="tickets"/></Link>
         </div>
         <div className="dashboard__icon-container">
-            <DashboardOutlinedIcon className="dashboard-icon" aria-label="dashboard"/>
+            <Link to="/stats"><DashboardOutlinedIcon className="dashboard-icon" aria-label="dashboard"/></Link>
         </div>
         {/* <div className="play__icon-container">
             <PlayCircleOutlineRoundedIcon className="play-icon" aria-label="play" />      

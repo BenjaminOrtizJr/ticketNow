@@ -8,7 +8,9 @@ import ProtectedRoute from './components/ProtectedRoute'
 import TicketForm from './components/TicketForm'
 import TicketQueue from './components/TicketQueue'
 import GlobalQueue from './components/GlobalQueue'
-
+import HomePage from './components/HomePage'
+import Information from './components/Information'
+import QueueStats from './components/QueueStats'
 
 function App() {
   const { token, logout, addTicket } = useContext(UserContext)
@@ -19,13 +21,25 @@ function App() {
         <Switch>
           <Route exact path="/"
             render={() => token ? <Redirect to="/form"/> : <Auth />}
-          />
+        />
+        <ProtectedRoute
+          path="/home"
+          component={HomePage}
+          redirectTo="/"
+          token={token}
+        />
         <ProtectedRoute
           path="/form"
           component={TicketForm}
           redirectTo="/"
           token={token}
           addTicket={addTicket}
+        />
+        <ProtectedRoute
+          path="/info"
+          component={Information}
+          redirectTo="/"
+          token={token}
         />
         <ProtectedRoute
           path="/ticketqueue"
@@ -36,6 +50,12 @@ function App() {
         <ProtectedRoute
           path="/globalqueue"
           component={GlobalQueue}
+          redirectTo="/"
+          token={token}
+        />
+        <ProtectedRoute
+          path="/stats"
+          component={QueueStats}
           redirectTo="/"
           token={token}
         />

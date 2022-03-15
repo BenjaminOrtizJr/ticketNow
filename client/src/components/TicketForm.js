@@ -144,6 +144,7 @@ const TicketForm = (props) => {
                                 required={true}
                                 />
                                 <InfoOutlinedIcon style={{ fontSize: 27 }} className="info-button" />
+                                <div className="info-pop-container">{username} currently logged in.</div>
                         </div>   
                             <input id="contact-method"
                                 className="input-top-right"

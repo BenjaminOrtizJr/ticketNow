@@ -464,6 +464,19 @@ h3 {
     margin-left: 5px;
 }
 
+.info-pop-container {
+    display: none;
+}
+
+.info-button:hover + .info-pop-container {
+    display: block;
+    position: absolute;
+    color: blue;
+    width: 50px;
+    margin-left: 18rem;
+    font-size: 12px;
+}
+
 .section-two {
     display: flex;
 }
@@ -526,7 +539,7 @@ h3 {
 
 .ticket-container {
     display: flex;
-    margin-left: 52px;
+    margin-left: 50px;
     margin-right: auto;
     max-width: 97.2%;
     /* border-bottom: .2px solid black; */
@@ -543,7 +556,6 @@ h3 {
     height: 50px;
     font-size: 12px;
     width: 100%;
-    
     overflow: hidden;
 }
 
@@ -566,4 +578,18 @@ h3 {
 .delete-icon {
     color: rgb(156, 31, 31);
     cursor: pointer;
+}
+
+/* HomePage */
+
+.home-page > h1 {
+    margin-left: 60px;
+}
+
+.information-container {
+    margin-left: 60px;
+}
+
+.queue-stats > h1 {
+    margin-left: 60px;
 }
