@@ -558,59 +558,12 @@ h3 {
     margin-bottom: auto;
 }
 
-
-/* .ticket-container-number {
-
+.edit-icon {
+    color: rgb(68, 65, 65);
+    cursor: pointer;
 }
 
-.ticket-container-caller {
-
+.delete-icon {
+    color: rgb(156, 31, 31);
+    cursor: pointer;
 }
-
-.ticket-container-location {
-
-}
-
-.ticket-container-knowledge {
-
-}
-
-.ticket-container-calltype {
-
-}
-
-.ticket-container-contacttype {
-
-}
-
-.ticket-container-openedby {
-
-}
-
-.ticket-container-opened {
-
-}
-
-.ticket-container-shortdescription {
-
-}
-
-.ticket-container-description {
-
-}
-
-.edit-button {
-
-}
-
-.edit-button:hover {
-
-}
-
-.delete-button {
-
-}
-
-.delete-button:hover {
-
-} */

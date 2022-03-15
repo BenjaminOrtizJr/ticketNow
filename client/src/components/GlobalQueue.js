@@ -1,5 +1,5 @@
 import React, { useContext, useEffect } from 'react'
-import TicketList from '../components/TicketList'
+import GlobalList from '../components/GlobalList'
 import { UserContext } from '../context/UserProvider'
 
 const GlobalQueue = (props) => {
@@ -16,7 +16,7 @@ const GlobalQueue = (props) => {
     return (
         <div className="ticket-queue">
             <h1>Global Queue</h1>
-            <TicketList tickets={tickets} />
+            <GlobalList tickets={tickets} />
         </div>
     )
 }
