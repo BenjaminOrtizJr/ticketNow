@@ -22,7 +22,7 @@ mongoose.connect(process.env.MONGO_URL,
 
 // Routes
 app.use('/api/auth', require('./routes/authRouter'))
-app.use('/api', expressJwt({ secret: "secret", algorithms: ['HS256'] }))
+app.use('/api', expressJwt({ secret: process.env.SECRET, algorithms: ['HS256'] }))
 app.use('/api/ticket', require('./routes/ticketRouter'))
 
 // Error Handling

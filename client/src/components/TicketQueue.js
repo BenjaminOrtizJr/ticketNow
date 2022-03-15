@@ -15,7 +15,7 @@ const TicketQueue = (props) => {
     
     return (
         <div className="ticket-queue">
-            <h1>My Tickets</h1>
+            <h1>My Queue</h1>
             <TicketList tickets={tickets} />
         </div>
     )
