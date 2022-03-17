@@ -309,6 +309,34 @@ h3 {
     border-radius: 3px;
 }
 
+.burger-icon:hover + .burger-menu {
+    display: block;
+    position: absolute;
+}
+
+.burger-menu {
+    display: none;
+}
+
+.burger-list {
+    position: relative;
+    left: 5.4rem;
+    bottom: 4px;
+    background-color: darkgray;
+    z-index: 2;
+}
+
+.burger-list > li {
+    list-style-type: none;
+    position: relative;
+    right: 15px;
+}
+
+.burger-link {
+    text-decoration: none;
+    font-size: 12px;
+}
+
 .ticket-number-container {
     position: absolute; 
     margin-top: 8px;

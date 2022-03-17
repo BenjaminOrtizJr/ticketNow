@@ -5,6 +5,7 @@ import MenuOutlinedIcon from '@material-ui/icons/MenuOutlined'
 import AttachFileOutlinedIcon from '@material-ui/icons/AttachFileOutlined'
 import MoreHorizOutlinedIcon from '@material-ui/icons/MoreHorizOutlined'
 import { UserContext } from '../context/UserProvider'
+import { Link } from 'react-router-dom'
 
 const initialInputs = {
     ticketNumber: "",
@@ -51,8 +52,16 @@ const TicketForm = (props) => {
             {/* Top Inner Navigation */}
         <div className="top-inner-nav">
             <div className="inner-nav-box1">
-                <ArrowBackIosOutlinedIcon  className="back-icon" aria-label="back-arrow" />
-                <MenuOutlinedIcon className="burger-icon" aria-label="menu" />
+                <Link to="/home"><ArrowBackIosOutlinedIcon  className="back-icon" aria-label="back-arrow" /></Link>
+                    <MenuOutlinedIcon className="burger-icon" aria-label="menu" />
+                    <div className="burger-menu">
+                        <ul className="burger-list">
+                            <li><Link className="burger-link" to={{ pathname: "https://www.google.com" }} target="_blank">Google</Link></li>
+                            <li><Link className="burger-link" to={{ pathname: "https://www.google.com" }} target="_blank">StackFlow</Link></li>
+                            <li><Link className="burger-link" to={{ pathname: "https://www.google.com" }} target="_blank">HelpDesk</Link></li>
+                            <li><Link className="burger-link" to={{ pathname: "https://www.google.com" }} target="_blank">SourcePC</Link></li>
+                        </ul>
+                    </div>
                 <span className="ticket-number-container">
                     <h6 className="ticket-number">Call-CALL0000001</h6>
                     <h6 className="new-record">New record</h6>     
