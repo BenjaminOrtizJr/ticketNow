@@ -324,6 +324,7 @@ h3 {
     bottom: 4px;
     background-color: darkgray;
     z-index: 2;
+    border-radius: 5px;
 }
 
 .burger-list > li {
@@ -559,10 +560,123 @@ h3 {
 
 .ticket-queue > h1 {
     margin-left: 60px;
+    
 }
 
+.queue-headers {
+    display: flex;
+    justify-content: space-evenly;
+    margin-left: 60px;
+    margin-top: 5px;
+}
 
+.queue-headers > span {
+    display: flex;
+}
 
+.queue-header-text {
+    font-size: 12px;
+}
+
+.span1 {
+    position: relative;
+    right: 18px;
+}
+
+.span2 {
+    position: relative;
+    right: 10px;
+}
+
+.span3 {
+    position: relative;
+    left: 8px;
+}
+
+.span4 {
+    position: relative;
+    left: 12px;
+}
+
+.span5 {
+    position: relative;
+    left: 20px;
+}
+
+.span6 {
+    position: relative;
+    left: 24px;
+}
+
+.span7 {
+    position: relative;
+    left: 8px;
+}
+
+.span8 {
+    position: relative;
+    left: 2px;
+}
+
+.span9 {
+    position: relative;
+    left: 10px;
+}
+
+.span10 {
+    position: relative;
+    right: 28px;
+}
+
+.span11 {
+    position: relative;
+    right: 18px;
+}
+
+.span22 {
+    position: relative;
+    right: 8px;
+}
+
+.span33 {
+    position: relative;
+    left: 14px;
+}
+
+.span44 {
+    position: relative;
+    left: 22px;
+}
+
+.span55 {
+    position: relative;
+    left: 38px;
+}
+
+.span66 {
+    position: relative;
+    left: 44px;
+}
+
+.span77 {
+    position: relative;
+    left: 32px;
+}
+
+.span88 {
+    position: relative;
+    left: 32px;
+}
+
+.span99 {
+    position: relative;
+    left: 40px;
+}
+
+.span100 {
+    position: relative;
+    left: 8px;
+}
 /* Ticket */
 
 .ticket-container {
