@@ -309,7 +309,7 @@ h3 {
     border-radius: 3px;
 }
 
-.burger-icon:hover + .burger-menu {
+.burger-icon:active + .burger-menu {
     display: block;
     position: absolute;
 }
