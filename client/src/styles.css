@@ -303,19 +303,19 @@ h3 {
     margin-left: 5px;
 }
 
-.burger-icon:hover {
-    background-color: rgb(204, 202, 202);
-    border: 1px solid black;
-    border-radius: 3px;
-}
-
-.burger-icon:active + .burger-menu {
-    display: block;
-    position: absolute;
-}
-
 .burger-menu {
     display: none;
+}
+
+.burger-icon:hover {
+    
+}
+
+.burger-icon:hover:active + .burger-menu {
+    display: block;
+    position: absolute;
+    transition: 0s 180s;
+    
 }
 
 .burger-list {

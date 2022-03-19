@@ -45,6 +45,9 @@ const TicketForm = (props) => {
             username
         }
     } = useContext(UserContext)
+
+    const navToggle = document.querySelector('burger-icon')
+    const toggleLink = document.querySelectorAll('burger-link')
     
     return (
         <>
@@ -53,7 +56,7 @@ const TicketForm = (props) => {
         <div className="top-inner-nav">
             <div className="inner-nav-box1">
                 <Link to="/home"><ArrowBackIosOutlinedIcon  className="back-icon" aria-label="back-arrow" /></Link>
-                    <MenuOutlinedIcon className="burger-icon" aria-label="menu" />
+                    <MenuOutlinedIcon className="burger-icon" onClick={() => }aria-label="menu" />
                     <div className="burger-menu">
                         <ul className="burger-list">
                             <li><Link className="burger-link" to={{ pathname: "https://www.google.com" }} target="_blank">Google</Link></li>
