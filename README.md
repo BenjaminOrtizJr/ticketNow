@@ -1,2 +1,2 @@
 # ticketNow
-React - Express - Node - MYSQL
+MongoDB - Express - React - Node
