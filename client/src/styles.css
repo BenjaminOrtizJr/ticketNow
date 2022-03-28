@@ -299,45 +299,6 @@ h3 {
     background-color: rgb(204, 202, 202);
 }
 
-.burger-icon {
-    margin-left: 5px;
-}
-
-.burger-menu {
-    display: none;
-}
-
-.burger-icon:hover {
-    
-}
-
-.burger-icon:hover:active + .burger-menu {
-    display: block;
-    position: absolute;
-    transition: 0s 180s;
-    
-}
-
-.burger-list {
-    position: relative;
-    left: 5.4rem;
-    bottom: 4px;
-    background-color: darkgray;
-    z-index: 2;
-    border-radius: 5px;
-}
-
-.burger-list > li {
-    list-style-type: none;
-    position: relative;
-    right: 15px;
-}
-
-.burger-link {
-    text-decoration: none;
-    font-size: 12px;
-}
-
 .ticket-number-container {
     position: absolute; 
     margin-top: 8px;
@@ -346,7 +307,7 @@ h3 {
 
 .inner-nav-box2 {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     width: 180px;
     margin-right: 5px;
 }
@@ -724,9 +685,29 @@ h3 {
 
 /* HomePage */
 
+.post-container {
+    margin-left: 30px;
+    border: .5 solid black;
+}
+
 .home-page > h1 {
     margin-left: 60px;
 }
+
+.home-page-post {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 15px 10px;
+  background: #fff;
+
+}
+
+/* Queue Stats */
 
 .information-container {
     margin-left: 60px;
