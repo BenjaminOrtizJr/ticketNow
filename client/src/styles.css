@@ -66,7 +66,7 @@
     margin-top: 10px;
     background-color: rgb(32, 32, 32);
     color: whitesmoke;
-    border-bottom: 1px solid#055481;
+    border-bottom: 1px solid #055481;
 }
 
 /* Top Navigation */
@@ -526,7 +526,7 @@ h3 {
 
 .queue-headers {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     margin-left: 60px;
     margin-top: 5px;
 }
@@ -535,18 +535,22 @@ h3 {
     display: flex;
 }
 
+.queue-headers > span > p {
+    font-size: 13px;
+}
+
 .queue-header-text {
     font-size: 12px;
 }
 
 .span1 {
     position: relative;
-    right: 18px;
+    right: 10px;
 }
 
 .span2 {
     position: relative;
-    right: 10px;
+    right: 6px;
 }
 
 .span3 {
@@ -556,47 +560,49 @@ h3 {
 
 .span4 {
     position: relative;
-    left: 12px;
+    left: 4px;
 }
 
 .span5 {
     position: relative;
-    left: 20px;
+    left: 8px;
 }
 
 .span6 {
     position: relative;
-    left: 24px;
+    left: 6px;
 }
 
 .span7 {
     position: relative;
-    left: 8px;
+    right: 18px;
 }
 
 .span8 {
     position: relative;
-    left: 2px;
+    right: 30px;
 }
 
 .span9 {
     position: relative;
-    left: 10px;
+    right: 30px;
 }
 
 .span10 {
     position: relative;
-    right: 28px;
+    right: 72px;
 }
+
+/* Global Queue */
 
 .span11 {
     position: relative;
-    right: 18px;
+    right: 8px;
 }
 
 .span22 {
     position: relative;
-    right: 8px;
+    right: 2px;
 }
 
 .span33 {
@@ -606,37 +612,37 @@ h3 {
 
 .span44 {
     position: relative;
-    left: 22px;
+    left: 14px;
 }
 
 .span55 {
     position: relative;
-    left: 38px;
+    left: 22px;
 }
 
 .span66 {
     position: relative;
-    left: 44px;
+    left: 22px;
 }
 
 .span77 {
     position: relative;
-    left: 32px;
+    left: 6px;
 }
 
 .span88 {
     position: relative;
-    left: 32px;
+    right: 2px;
 }
 
 .span99 {
     position: relative;
-    left: 40px;
+    left: 2px;
 }
 
 .span100 {
     position: relative;
-    left: 8px;
+    right: 38px;
 }
 /* Ticket */
 
