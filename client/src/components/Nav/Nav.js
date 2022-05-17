@@ -17,7 +17,7 @@ import SettingsOutlinedIcon from '@material-ui/icons/SettingsOutlined'
 // import AttachFileOutlinedIcon from '@material-ui/icons/AttachFileOutlined'
 // import MoreHorizOutlinedIcon from '@material-ui/icons/MoreHorizOutlined'
 // import PlayCircleOutlineRoundedIcon from '@material-ui/icons/PlayCircleOutlineRounded'
-import Profile from '../Nav/images/profile_pic.jpg'
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 // import "../Nav/Nav.css"
 import { UserContext } from '../../context/UserProvider'
 
@@ -39,7 +39,7 @@ export default function Nav(props) {
         </div>
         <div className="user__section">
           {/* <FiberManualRecordIcon className="user__profile-circle" aria-label="profile-image" /> */}
-          <img src={Profile} className="user__profile-image" alt="user_profile" />
+          <AccountCircleIcon className="user__profile-image" style={{ fontSize: 36 }}/>
           <FiberManualRecordIcon className="user__online-circle" aria-label="status-indicator"/>
           <p className="user__name">{username}</p>
           {/* <Select labelId="label" id="select">

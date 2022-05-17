@@ -56,7 +56,7 @@ const TicketForm = (props) => {
         <div className="top-inner-nav">
             <div className="inner-nav-box1">
                 <Link to="/home"><ArrowBackIosOutlinedIcon  className="back-icon" aria-label="back-arrow" /></Link>
-                    <MenuOutlinedIcon className="burger-icon" onClick={() => }aria-label="menu" />
+                    <MenuOutlinedIcon className="burger-icon" onClick={''} aria-label="menu" />
                     <div className="burger-menu">
                         <ul className="burger-list">
                             <li><Link className="burger-link" to={{ pathname: "https://www.google.com" }} target="_blank">Google</Link></li>
@@ -98,6 +98,7 @@ const TicketForm = (props) => {
                                 placeholder='#########'
                                 value={ticketNumber}
                                 onChange={handleChange}
+                                required={true}
                             />
                         <input id="caller_name"
                                 className="input-top-left"
