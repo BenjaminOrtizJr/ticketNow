@@ -55,18 +55,6 @@ const TicketForm = (props) => {
         <div className="top-inner-nav">
             <div className="inner-nav-box1">
                 <Link to="/home"><ArrowBackIosOutlinedIcon  className="back-icon" aria-label="back-arrow" /></Link>
-<<<<<<< HEAD
-                    <MenuOutlinedIcon className="burger-icon" onClick={''} aria-label="menu" />
-                    <div className="burger-menu">
-                        <ul className="burger-list">
-                            <li><Link className="burger-link" to={{ pathname: "https://www.google.com" }} target="_blank">Google</Link></li>
-                            <li><Link className="burger-link" to={{ pathname: "https://www.google.com" }} target="_blank">StackFlow</Link></li>
-                            <li><Link className="burger-link" to={{ pathname: "https://www.google.com" }} target="_blank">HelpDesk</Link></li>
-                            <li><Link className="burger-link" to={{ pathname: "https://www.google.com" }} target="_blank">SourcePC</Link></li>
-                        </ul>
-                    </div>
-=======
->>>>>>> 0cdeeb8780369b29da70e70f7d123aa10ce26757
                 <span className="ticket-number-container">
                     <h6 className="ticket-number">Call-CALL0000001</h6>
                     <h6 className="new-record">New record</h6>     

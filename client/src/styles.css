@@ -300,7 +300,6 @@ h3 {
     background-color: rgb(204, 202, 202);
 }
 
-<<<<<<< HEAD
 .burger-icon {
     margin-left: 5px;
 }
@@ -340,8 +339,6 @@ h3 {
     font-size: 12px;
 }
 
-=======
->>>>>>> 0cdeeb8780369b29da70e70f7d123aa10ce26757
 .ticket-number-container {
     position: absolute; 
     margin-top: 8px;
@@ -569,7 +566,7 @@ h3 {
 
 .queue-headers {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     margin-left: 60px;
     margin-top: 5px;
 }
@@ -588,20 +585,12 @@ h3 {
 
 .span1 {
     position: relative;
-<<<<<<< HEAD
     right: 64px;
-=======
-    right: 10px;
->>>>>>> 0cdeeb8780369b29da70e70f7d123aa10ce26757
 }
 
 .span2 {
     position: relative;
-<<<<<<< HEAD
     right: 52px;
-=======
-    right: 6px;
->>>>>>> 0cdeeb8780369b29da70e70f7d123aa10ce26757
 }
 
 .span3 {
@@ -611,83 +600,45 @@ h3 {
 
 .span4 {
     position: relative;
-<<<<<<< HEAD
     right: 20px;
-=======
-    left: 4px;
->>>>>>> 0cdeeb8780369b29da70e70f7d123aa10ce26757
 }
 
 .span5 {
     position: relative;
-<<<<<<< HEAD
     right: 8px;
-=======
-    left: 8px;
->>>>>>> 0cdeeb8780369b29da70e70f7d123aa10ce26757
 }
 
 .span6 {
     position: relative;
-<<<<<<< HEAD
-=======
-    left: 6px;
->>>>>>> 0cdeeb8780369b29da70e70f7d123aa10ce26757
 }
 
 .span7 {
     position: relative;
-<<<<<<< HEAD
     right: 12px;
-=======
-    right: 18px;
->>>>>>> 0cdeeb8780369b29da70e70f7d123aa10ce26757
 }
 
 .span8 {
     position: relative;
-<<<<<<< HEAD
     right: 14px;
-=======
-    right: 30px;
->>>>>>> 0cdeeb8780369b29da70e70f7d123aa10ce26757
 }
 
 .span9 {
     position: relative;
-<<<<<<< HEAD
-=======
-    right: 30px;
->>>>>>> 0cdeeb8780369b29da70e70f7d123aa10ce26757
 }
 
 .span10 {
     position: relative;
-<<<<<<< HEAD
     right: 34px;
-=======
-    right: 72px;
->>>>>>> 0cdeeb8780369b29da70e70f7d123aa10ce26757
 }
-
-/* Global Queue */
 
 .span11 {
     position: relative;
-<<<<<<< HEAD
     right: 64px;
-=======
-    right: 8px;
->>>>>>> 0cdeeb8780369b29da70e70f7d123aa10ce26757
 }
 
 .span22 {
     position: relative;
-<<<<<<< HEAD
     right: 50px;
-=======
-    right: 2px;
->>>>>>> 0cdeeb8780369b29da70e70f7d123aa10ce26757
 }
 
 .span33 {
@@ -697,65 +648,39 @@ h3 {
 
 .span44 {
     position: relative;
-<<<<<<< HEAD
     right: 10px;
-=======
-    left: 14px;
->>>>>>> 0cdeeb8780369b29da70e70f7d123aa10ce26757
 }
 
 .span55 {
     position: relative;
-<<<<<<< HEAD
     left: 8px;
-=======
-    left: 22px;
->>>>>>> 0cdeeb8780369b29da70e70f7d123aa10ce26757
 }
 
 .span66 {
     position: relative;
-<<<<<<< HEAD
     left: 20px;
-=======
-    left: 22px;
->>>>>>> 0cdeeb8780369b29da70e70f7d123aa10ce26757
 }
 
 .span77 {
     position: relative;
-<<<<<<< HEAD
     left: 12px;
-=======
-    left: 6px;
->>>>>>> 0cdeeb8780369b29da70e70f7d123aa10ce26757
 }
 
 .span88 {
     position: relative;
-<<<<<<< HEAD
     left: 14px;
-=======
-    right: 2px;
->>>>>>> 0cdeeb8780369b29da70e70f7d123aa10ce26757
 }
 
 .span99 {
     position: relative;
-<<<<<<< HEAD
     left: 32px;
-=======
-    left: 2px;
->>>>>>> 0cdeeb8780369b29da70e70f7d123aa10ce26757
 }
 
 .span100 {
     position: relative;
-<<<<<<< HEAD
-=======
-    right: 38px;
->>>>>>> 0cdeeb8780369b29da70e70f7d123aa10ce26757
 }
+
+
 /* Ticket */
 
 .ticket-container {
