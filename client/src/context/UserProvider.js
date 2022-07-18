@@ -23,7 +23,7 @@ const UserProvider = (props) => {
 
 
     const signup = (credentials) => {
-        axios.post("/api/auth/signup", credentials)
+        axios.post("https://symphonious-truffle-6fc66f.netlify.app/api/auth/signup", credentials)
             .then(res => {
                 const { user, token } = res.data
                 localStorage.setItem("token", token)
@@ -38,7 +38,7 @@ const UserProvider = (props) => {
     }
 
     const login = (credentials) => {
-        axios.post("/api/auth/login", credentials)
+        axios.post("https://symphonious-truffle-6fc66f.netlify.app/api/auth/login", credentials)
             .then(res => {
                 const { user, token } = res.data
                 localStorage.setItem("token", token)
@@ -77,7 +77,7 @@ const UserProvider = (props) => {
     }
 
     const getAllTickets = () => {
-        userAxios.get("/api/ticket")
+        userAxios.get("https://symphonious-truffle-6fc66f.netlify.app/api/ticket")
             .then(res => {
                 setUserState(prevState => ({
                     ...prevState,
@@ -88,7 +88,7 @@ const UserProvider = (props) => {
     }
 
     const getUserTickets = () => {
-        userAxios.get("/api/ticket/user")
+        userAxios.get("https://symphonious-truffle-6fc66f.netlify.app/api/ticket/user")
             .then(res => {
                 setUserState(prevState => ({
                     ...prevState,
@@ -99,7 +99,7 @@ const UserProvider = (props) => {
     }
 
     const addTicket = (newTicket) => {
-        userAxios.post("/api/ticket", newTicket)
+        userAxios.post("https://symphonious-truffle-6fc66f.netlify.app/api/ticket", newTicket)
             .then(res => {
                 setUserState(prevState => ({
                     ...prevState,
@@ -110,7 +110,7 @@ const UserProvider = (props) => {
     }
 
     const deleteTicket = (ticketId) => {
-        userAxios.delete(`/api/ticket/${ticketId}`)
+        userAxios.delete(`https://symphonious-truffle-6fc66f.netlify.app/api/ticket/${ticketId}`)
             .then(res => {
                 setUserState(prevState => 
                 prevState.filter(ticket => ticket._id !== ticketId))
@@ -119,7 +119,7 @@ const UserProvider = (props) => {
     }
 
     const editTicket = (updates, ticketId) => {
-        axios.put(`/api/ticket/${ticketId}`, updates)
+        axios.put(`https://symphonious-truffle-6fc66f.netlify.app/api/ticket/${ticketId}`, updates)
             .then(res => {
             setUserState(prevState => prevState.map(ticket => ticket._id !== ticketId ? ticket : res.data))
             })

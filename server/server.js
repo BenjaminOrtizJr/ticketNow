@@ -4,12 +4,14 @@ const app = express()
 const morgan = require('morgan')
 const mongoose = require('mongoose')
 const expressJwt = require('express-jwt')
+const cors = require('cors')
 const PORT = process.env.PORT || 8000
 require('dotenv').config()
 
 // Middleware
 app.use(express.json())
 app.use(morgan('dev'))
+app.use(cors())
 
 // DB Connection
 mongoose.connect(process.env.MONGO_URL,
@@ -39,4 +41,4 @@ app.listen(PORT, () => {
     console.log(`Server is running on Port ${PORT}`)
 })
 
-//test
+//test 1
