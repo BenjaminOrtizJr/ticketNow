@@ -3,15 +3,17 @@ const express = require('express')
 const app = express()
 const morgan = require('morgan')
 const mongoose = require('mongoose')
-const expressJwt = require('express-jwt')
 const cors = require('cors')
-const PORT = process.env.PORT || 8000
+const expressJwt = require('express-jwt')
+
+const PORT = "https://ticket-now-app.herokuapp.com/"
 require('dotenv').config()
 
 // Middleware
 app.use(express.json())
 app.use(morgan('dev'))
 app.use(cors())
+
 
 // DB Connection
 mongoose.connect(process.env.MONGO_URL,
